@@ -1,0 +1,1 @@
+//This is where we connect to the sql database with sequelize

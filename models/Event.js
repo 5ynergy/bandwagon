@@ -28,7 +28,12 @@ Event.init(
             model: 'user',
             key: 'id',
           },
+    },
+    eventImage: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
+// When calling image, when finding User, take userImage string, put that into an img tag src to show the image
   },
   //Figure out how to create image attribute
   {

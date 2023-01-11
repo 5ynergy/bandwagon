@@ -10,6 +10,4 @@
 
 //Genre belongsToMany User
 
-//Maybe need associations for Images? 
-
 

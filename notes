@@ -5,8 +5,8 @@
     //Can test login on Insomnia, have session on server.js (replicate session and controllers for User: POST login/POST logout)
     //Will have to do mock login on Insomnia can test everything - can add validation afterwards
     //Test GET/POST routes for event/user details
-//Person B work reading documention on making sure image upload, work with Person A adding in what they think could work
- //Genre easiest to test, test that after making the table and route
+//Person B work reading documention on Cloudinary on making sure image upload, work with Person A adding in what they think could work with routes
+//Genre easiest to test, test that after making the table and route
 
  //FRONT END:
  //Markup in HTML (or immediately with Handlebars), can open up page and then break down segments into handlebar files

@@ -1,5 +1,47 @@
 [
     {
-        "genre_name"
+        "genre_name": "R&B"
+    },
+    {
+        "genre_name": "Pop"
+    },
+    {
+        "genre_name": "Hip-Hop"
+    },
+    {
+        "genre_name": "Latin"
+    },
+    {
+        "genre_name": "Electronic"
+    },
+    {
+        "genre_name": "DJ"
+    },
+    {
+        "genre_name": "Dance/Alternative"
+    },
+    {
+        "genre_name": "Rock"
+    },
+    {
+        "genre_name": "Latin"
+    },
+    {
+        "genre_name": "Indie"
+    },
+    {
+        "genre_name": "Soul/Funk"
+    },
+    {
+        "genre_name": "Folk/Acoustic"
+    },
+    {
+        "genre_name": "Metal"
+    },
+    {
+        "genre_name": "Blues"
+    },
+    {
+        "genre_name": "Country"
     }
 ]

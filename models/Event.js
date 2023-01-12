@@ -24,6 +24,7 @@ Event.init(
       allowNull: false,
     },
     artist_id: {
+      type:DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id',
@@ -45,4 +46,4 @@ Event.init(
   }
 );
 
-model.exports = Event
+module.exports = Event

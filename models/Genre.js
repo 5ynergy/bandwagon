@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Genre extends Model {}
 
-User.init(
+Genre.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,7 +11,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    genre: {
+    genre_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

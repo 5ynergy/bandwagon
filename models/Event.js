@@ -29,7 +29,7 @@ Event.init(
             key: 'id',
           },
     },
-    eventImage: {
+    event_image: {
         type: DataTypes.STRING,
         allowNull: true,
     }

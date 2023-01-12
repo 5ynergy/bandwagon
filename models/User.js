@@ -27,29 +27,36 @@ User.init(
       },
     },
     artistName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
     },
     socials: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    genres: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        references: {
-            model: 'genre',
-            key: 'id',
-          },
+    genre_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: "genre",
+        key: "id",
+      },
     },
     userImage: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    }
-// When calling image, when finding User, take userImage string, put that into an img tag src to show the image
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    // When calling image, when finding User, take userImage string, put that into an img tag src to show the image
   },
-  //Insert bcrypt function here{}
+  {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+    },
+  },
   {
     sequelize,
     timestamps: false,

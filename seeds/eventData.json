@@ -1,0 +1,17 @@
+[
+    {
+      "eventName": "Fallapalooza",
+      "date": "2023-10-07 5:30:00",
+      "content": "Kick off fall with these goofs and their funky music! ",
+      "artist_id": "1",
+      "event_image": null
+    },
+    {
+        "eventName": "Dark at 4pm",
+        "date": "2023-01-07 16:00:00",
+        "content": "Curb your seasonal depression with some fun tunes!",
+        "artist_id": "1",
+        "event_image": null
+      }
+  ]
+  

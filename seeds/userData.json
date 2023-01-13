@@ -1,0 +1,20 @@
+[
+    {
+      "username": "FallGuysOfficial",
+      "email": "ilovepumpkinspice@gmail.com",
+      "password": "sweaterweather",
+      "artistName": "The Fall Guys",
+      "socials": "@pumpkinbooty",
+      "genre_id": 4,
+      "userImage": null
+    },
+    {
+        "username": "SadBoisOfficial",
+        "email": "imsoemo@gmail.com",
+        "password": "gototherapy",
+        "artistName": "Sad Bois Club",
+        "socials": "@sadboimusic",
+        "genre_id": 1,
+        "userImage": null
+      }
+  ]

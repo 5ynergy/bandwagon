@@ -25,4 +25,4 @@ Genre.init(
   }
 );
 
-model.exports = Genre;
+module.exports = Genre;

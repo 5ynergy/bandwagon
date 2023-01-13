@@ -7,3 +7,4 @@ const { User, Event, Genre} = require('../models')
 
 //Login route to redirect to homepage /login
 //If a session exists, redirect the request to the homepage
+                                                                 

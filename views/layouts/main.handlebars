@@ -1,3 +1,35 @@
 {{!-- This is where we will put the main static layout for webpage
 We will add other handlebars files in main folder for each page.
 We will also use partials folder for partials --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<nav>
+    <h1>Bandwagon</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/login">Log In</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/signup">Logout</a></li>
+        <li>Artist by Genre</li>
+    </ul>
+</nav>
+<body>
+    <main>
+    {{{ body }}}
+    </main>
+    <footer>
+        <p>All rights reserved. 2023.</p>
+    </footer>
+</body>
+</html>

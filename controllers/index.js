@@ -4,11 +4,15 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
 const genreRoutes = require('./genreRoutes.js')
+const eventRoutes = require('./eventRoutes.js')
+const artistRoutes = require('./artistRoutes')
 
 // //bandwagon.com/
 // router.use('/', homeRoutes);
 // router.use('/api', apiRoutes);
-router.use('/genres', genreRoutes)
+// router.use('/genres', genreRoutes)
+router.use('/events', eventRoutes)
+// router.use('/artists', artistRoutes)
 
 
 

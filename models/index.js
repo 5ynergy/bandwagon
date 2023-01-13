@@ -13,11 +13,12 @@ User.hasMany(Event, {
 Event.belongsTo(User, {
   foreignKey: "artist_id",
 });
+
 //User belongsTo Genre
 User.belongsTo(Genre);
 
 //Genre belongsToMany User
-Genre.hasMany(User, {
+Genre.belongsToMany(User, {
   foreignKey: "genre_id",
 });
 

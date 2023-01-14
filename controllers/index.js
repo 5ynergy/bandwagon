@@ -7,7 +7,8 @@ const genreRoutes = require("./genreRoutes");
 const eventRoutes = require("./eventRoutes");
 const artistRoutes = require("./artistRoutes");
 const profileRoutes = require("./profileRoutes");
-const dashboardRoutes = require('./dashboardRoutes')
+const dashboardRoutes = require("./dashboardRoutes");
+const userRoutes = require("./userRoutes");
 
 // //bandwagon.com/
 
@@ -15,31 +16,31 @@ const dashboardRoutes = require('./dashboardRoutes')
 //eg. the route for editing artist data (PUT) actually is in profile routes, because the function is housed there
 
 router.use(homeRoutes);
-  //  "/" : GET route for rendering homepage and events within certain date
-  //  "/signup" : POST route for creating new user
-  //  "/login" : POST route for user login/authentication
-  // "/logout" : DELETE route to end session and redirect to the homepage "/"
+//  "/" : GET route for rendering homepage and events within certain date
+//  "/signup" : POST route for creating new user
+//  "/login" : POST route for user login/authentication
+// "/logout" : DELETE route to end session and redirect to the homepage "/"
 
 router.use(genreRoutes);
-  //  "/genres": GET route to display ALL genres
-  // "/genres/:id" GET route for individual genre, and showing all associated artists
+//  "/genres": GET route to display ALL genres
+// "/genres/:id" GET route for individual genre, and showing all associated artists
 
 router.use(eventRoutes);
-  // "/events" : GET ALL events
-  // "/events/:id" : GET individual event (displays on individual event page)
+// "/events" : GET ALL events
+// "/events/:id" : GET individual event (displays on individual event page)
 
 router.use(profileRoutes);
-  //  "/profile/:id": GET route for artist profile (only displays when User id matches id in URL)
-  // "/profile/:id" : PUT route for editing data (only NICE to have )
+//  "/profile/:id": GET route for artist profile (only displays when User id matches id in URL)
+// "/profile/:id" : PUT route for editing data (only NICE to have )
 
 router.use(artistRoutes);
-  // "/artist/:id" : GET artist by ID (listener view). Also displays artist's events as cards
+// "/artist/:id" : GET artist by ID (listener view). Also displays artist's events as cards
 
 router.use(dashboardRoutes);
-  // "/dashboard/:id" : GET route for getting events ONLY belonging to the logged-in User
-  // "/dashboard/:id" : PUT route for creating new event ONLY if logged in as user
+// "/dashboard/:id" : GET route for getting events ONLY belonging to the logged-in User
+// "/dashboard/:id" : PUT route for creating new event ONLY if logged in as user
 
-
+router.use(userRoutes);
 // router.use('/api', apiRoutes);
 
 //displays a 404 error when navigating to a link that does not exist
@@ -47,7 +48,4 @@ router.use("*", (req, res) => {
   res.render("pages/404");
 });
 
-// router.use((req, res) => {
-//   res.send("<h1>Wrong Route!</h1>")
-// });
 module.exports = router;

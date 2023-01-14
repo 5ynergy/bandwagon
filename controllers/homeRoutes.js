@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
 });
 
 
-//Login and logout are in userRoutes in api
+//Login and logout
     //Login route to redirect to profile /profile (so that new artist can edit details) -->
     //If a session exists, redirect the request to the homepage
 
@@ -26,4 +26,6 @@ router.get("/", async (req, res) => {
     //Signup route --> modal pops up where you enter artist data
     //POST artist data by signing up
 
+
+    
 module.exports = router;

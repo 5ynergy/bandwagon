@@ -9,7 +9,7 @@ const userData = [
         "name": "Fall Guys ",
         "bio": "Autumn is our favorite season and all our songs give you that sweater weather feel.",
         "socials": "@pumpkinbooty",
-        "genre_name": "Pop",
+        "genre_id": "3",
         "user_name": null
     },
     {
@@ -20,7 +20,7 @@ const userData = [
         "name": "Sad Bois Club",
         "bio": "We are a group of sad bois and we sing sad songs...",
         "socials": "@sadboimusic",
-        "genre_name": "Rock",
+        "genre_id": "5",
         "user_image": null
       }
   ]

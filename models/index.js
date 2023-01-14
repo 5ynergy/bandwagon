@@ -23,11 +23,10 @@ const Genre = require("./Genre");
 //   through: "ArtistGenres",
 // });
 
-User.belongsToMany(Genre, { 
-    through: 'UserGenres'
+User.belongsTo(Genre, { 
+    foreigKey: 'genre_id'
 })
-Genre.belongsToMany(User, { 
-    through: 'UserGenres'
+Genre.hasMany(User, { 
  })
 
 User.hasMany(Event)

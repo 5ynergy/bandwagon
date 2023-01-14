@@ -49,12 +49,12 @@ User.init(
       type: DataTypes.STRING,
       // allowNull: false,
     },
-    genre_name: {
+    genre_id: {
       type: DataTypes.STRING,
       // allowNull: false,
       references: {
         model: "Genre",
-        key: "name",
+        key: "id",
       }
     },
     user_image: {

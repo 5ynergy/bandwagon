@@ -11,10 +11,10 @@ const { Genre, User } = require('../models')
 router.get("/genres", async (req, res) => {
     try {
         const dbGenreData = await Genre.findAll({
-            include: [{ model: User, attributes: ["name"] }],
+            include: [{ model: User }],
         });
         //This is for insomnia test: 
-        res.status(200).json(dbEventData);
+        res.status(200).json(dbGenreData);
         //TODO: Insert render code for handlebars:
         //
         //
@@ -26,5 +26,21 @@ router.get("/genres", async (req, res) => {
 
 // //GET individual genre and show all associated artists
 //     //include User (name)
+router.get("/genres/:id", async (req, res) => {
+    try {
+        const dbGenreData = await Genre.findByPk(req.params.id, {
+            include: [{ model: User }],
+        });
+        //This is for insomnia test: 
+        res.status(200).json(dbGenreData);
+        //TODO: Insert render code for handlebars:
+        //
+        //
+        //
+
+    } catch (err){
+    res.status(500).json(err)}
+});
+
 
 module.exports = router

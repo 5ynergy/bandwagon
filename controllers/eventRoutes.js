@@ -18,11 +18,11 @@ router.get('/events', async (req, res) => {
         // //This is for insomnia test: WORKS!
         res.status(200).json(dbEventData);
 
-        //TODO: This code needs to be hooked up to handlebars:
-        // const events = dbEventdata.map((event) =>
-        //     event.get({ plain: true })
-        // );
-        // res.render("pages/events", { events });
+    
+        const events = dbEventdata.map((event) =>
+            event.get({ plain: true })
+        );
+        res.render("events", {layout:"main", events});
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

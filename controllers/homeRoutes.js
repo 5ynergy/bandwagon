@@ -1,15 +1,29 @@
-const router = require('express').Router()
-const { User, Event, Genre} = require('../models')
+const router = require("express").Router();
+const { User, Event, Genre } = require("../models");
 
-//GET the homepage to render
-router.get("/", (req, res) => {
-    //Enter code to also get events for homepage (within a certain date range)
-    res.render("pages/homepage")
-})
+//GET the homepage to render including events within cetain date
+router.get("/", async (req, res) => {
+    try {
+        const dbEventData = await Event.findAll({
+          //!!!! NEED TO FIGURE OUT HOW TO FILTER BY DATE
+          include: [{ model: User }],
+        });
+        res.status(200).json(dbEventData);
+    //Insert handlebars code
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+});
 
 
-//Login route to redirect to homepage /login
-//If a session exists, redirect the request to the homepage
-                                                                 
+//Login and logout are in userRoutes in api
+    //Login route to redirect to profile /profile (so that new artist can edit details) -->
+    //If a session exists, redirect the request to the homepage
 
-module.exports = router
+    //Logout route
+
+    //Signup route --> modal pops up where you enter artist data
+    //POST artist data by signing up
+
+module.exports = router;

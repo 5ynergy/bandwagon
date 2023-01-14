@@ -6,7 +6,8 @@ const userData = [
         "username": "FallGuysOfficial",
         "email": "ilovepumpkinspice@gmail.com",
         "password": "sweaterweather",
-        "name": "Beyonce",
+        "name": "Fall Guys ",
+        "bio": "Autumn is our favorite season and all our songs give you that sweater weather feel.",
         "socials": "@pumpkinbooty",
         "genre_name": "Pop",
         "user_name": null
@@ -16,7 +17,8 @@ const userData = [
         "username": "SadBoisOfficial",
         "email": "imsoemo@gmail.com",
         "password": "gototherapy",
-        "name": "Alicia Keys",
+        "name": "Sad Bois Club",
+        "bio": "We are a group of sad bois and we sing sad songs...",
         "socials": "@sadboimusic",
         "genre_name": "Rock",
         "user_image": null

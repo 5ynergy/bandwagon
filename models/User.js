@@ -42,13 +42,16 @@ User.init(
       allowNull: false,
       unique: true,
     },
+    bio: {
+      type: DataTypes.STRING
+    },
     socials: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     genre_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       references: {
         model: "Genre",
         key: "name",

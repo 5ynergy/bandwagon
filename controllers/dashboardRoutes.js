@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Event, User } = require("../models");
+const { Event,} = require("../models");
 // ROUTES for dashboard /dashboard 
 
 
@@ -30,6 +30,5 @@ router.post('/dashboard/new_event', async (req, res) => {
 })
 
 //POST event data (when artists submit "New Event")
-// (must be logged in, current user id must match profile owner id)
-// router.post('')
-    //Include artist (name, id)
+
+    module.exports = router;

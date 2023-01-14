@@ -7,13 +7,15 @@ const genreRoutes = require("./genreRoutes");
 const eventRoutes = require("./eventRoutes");
 const artistRoutes = require("./artistRoutes");
 const profileRoutes = require("./profileRoutes");
+const dashboardRoutes = require('./dashboardRoutes')
 
 // //bandwagon.com/
 router.use(homeRoutes);
 router.use(genreRoutes);
 router.use(eventRoutes);
 router.use(profileRoutes);
-router.use(artistRoutes)
+router.use(artistRoutes);
+router.use(dashboardRoutes);
 // router.use('/api', apiRoutes);
 
 //displays a 404 error when navigating to a link that does not exist

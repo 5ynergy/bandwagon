@@ -1,8 +1,12 @@
+{{!-- Grace: testing if events can be gotten here --}}
 <section>
     <h1>All Events</h1>
     <h3>See everything that's happening near you.</h3>
     <div id="event-cards">
-        {{> eventcard}}
+
+        {{#each eventcards as |eventcard|}}
+        {{/each}}
+
     </div>
     <p><a href="/">Return Home</a></p>
 </section>

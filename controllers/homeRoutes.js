@@ -3,12 +3,9 @@ const { User, Event, Genre} = require('../models')
 
 //GET the homepage to render
 router.get("/", (req, res) => {
+    //Enter code to also get events for homepage (within a certain date range)
     res.render("pages/homepage")
 })
-
-
-//GET all events (within certain data range) for homepage "/""
-    //Include artist (artistname)
 
 
 //Login route to redirect to homepage /login

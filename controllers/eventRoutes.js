@@ -15,12 +15,14 @@ router.get('/events', async (req, res) => {
             //Will find out how to filter by date later
             include: [{ model: User }]
         });
-        //This is for insomnia test:
+        // //This is for insomnia test: WORKS!
         res.status(200).json(dbEventData);
+
+    
         const events = dbEventdata.map((event) =>
             event.get({ plain: true })
         );
-        res.render("pages/events", { events });
+        res.render("events", {layout:"main", events});
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -36,8 +38,9 @@ router.get('/events/:id', async (req, res) => {
         if (!dbEventData) {
             res.render("pages/404")
         };
+        //This is 
         res.status(200).json(dbEventData);
-        //Add rendering code below
+        //Add rendering to handlebars code below
         //
         //
     } catch (err) {

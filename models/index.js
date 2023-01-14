@@ -24,10 +24,9 @@ const Genre = require("./Genre");
 // });
 
 User.belongsTo(Genre, { 
-    foreigKey: 'genre_id'
+    foreignKey: 'genre_id'
 })
-Genre.hasMany(User, { 
- })
+Genre.hasMany(User)
 
 User.hasMany(Event)
 Event.belongsTo(User, {

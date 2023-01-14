@@ -1,3 +1,11 @@
+const router = require('express').Router();
+const { Event, User } = require('../models');
+
+// GET the genres page to render
+router.get('/genres', (req, res) => {
+    res.render('pages/genres')
+})
+
 // //Routes for genre
 // const router = require('express').Router();
 // const { Genre, User } = require('../models')
@@ -19,3 +27,5 @@
 
 // //GET 1 genre
 //     //include User (name)
+
+module.exports = router

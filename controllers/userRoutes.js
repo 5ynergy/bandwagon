@@ -1,30 +1,31 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Genre } = require("../models");
 
 // CREATE new user
 router.post("/signup", async (req, res) => {
   try {
-    const dbUserData = await User.create({
+    const {username, email, password, name, bio, socials,genre_id,user_image} = req.body
+    // Need to figure out how to translate Front End Input genre name into genre_id for the back end
+    //const genre_id = front end input genre_name.id or something
+    const newUser = await User.create({
       //Credentials
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
+      username,
+      email,
+      password,
 
       //Artist data
-      name: req.body.name,
-      bio: req.body.bio,
-      socials: req.body.socials,
-      genre_id: req.body.genre_id, //Need to figure out how to translate front end input (Genre name) to genre_id when submitted to database
-      user_image: req.body.user_image 
+      name,
+      bio,
+      socials,
+      genre_id, //Need to figure out how to translate front end input (Genre name) to genre_id when submitted to database
+      user_image,
     });
-
     req.session.save(() => {
-      req.session.loggedIn = true; 
-
-      res.status(200).json(dbUserData);
+      req.session.loggedIn = true;
+      res.status(200).json(newUser);
     });
 
-    res.redirect('/login') //After you sign in, it redirects you to login page where you can login
+    // res.redirect("/login"); //After you sign in, it redirects you to login page where you can login
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -71,9 +72,24 @@ router.post("/logout", (req, res) => {
     req.session.destroy(() => {
       res.status(204).end();
     });
+    // res.redirect("/");
   } else {
     res.status(404).end();
   }
 });
 
 module.exports = router;
+
+// //Sample json data for Insomnia test:
+// [
+//   {
+//     "username": "graceIsCrying",
+//     "email": "gee.yao@gmail.com",
+//     "password": "imsotired123",
+//     "name": "Grace Yao",
+//     "bio": "When will this suffering end",
+//     "socials": "github.com/gyao1487",
+//     "genre_id": 3,
+//     "user_image": null
+//   }
+// ];

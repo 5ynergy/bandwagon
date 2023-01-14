@@ -23,15 +23,17 @@ const Genre = require("./Genre");
 //   through: "ArtistGenres",
 // });
 
-User.belongsTo(Genre, { 
-    foreignKey: 'genre_id'
-})
-Genre.hasMany(User)
+User.belongsTo(Genre, {
+  foreigKey: "genre_id",
+});
+Genre.hasMany(User);
 
-User.hasMany(Event)
 Event.belongsTo(User, {
-    foreignKey: 'artist_id'
-})
+  foreignKey: "artist_id",
+});
+User.hasMany(Event,  {
+    foreignKey: "artist_id",
+  });
 
 module.exports = {
   User,

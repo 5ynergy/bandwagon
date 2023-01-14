@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
+const Genre = require("./Genre");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -36,7 +37,7 @@ User.init(
         len: [8],
       },
     },
-    artistName: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -45,15 +46,15 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genre_id: {
+    genre_name: {
       type: DataTypes.STRING,
       allowNull: false,
       references: {
-        model: "genre",
-        key: "id",
-      },
+        model: "Genre",
+        key: "name",
+      }
     },
-    userImage: {
+    user_image: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -66,12 +67,11 @@ User.init(
         return newUserData;
       },
     },
-
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "User",
   }
 );
 

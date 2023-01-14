@@ -5,23 +5,23 @@ class Genre extends Model {}
 
 Genre.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    genre_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true
     },
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   // autoIncrement: true,
+    // }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "genre",
+    modelName: "Genre",
   }
 );
 

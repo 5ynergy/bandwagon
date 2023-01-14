@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');
-
+const expHandlebars = require("express-handlebars") //invoking handlebars so that we can use templates
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const path = require("path")
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,12 +21,22 @@ const sess = {
 };
 
 app.use(session(sess));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static("public")) //making files and folders in public available
 app.use(routes);
+app.use(require('./controllers'))
+
+//configure/connect handlebars to express
+// const handlebars = expHandlebars.create({}); //we will pass helper functions here
+const { engine } = require("express-handlebars")
+app.engine("handlebars", engine({defaultLayout: "main"}))
+app.set("view engine", "handlebars") //second param. is the file extension
+
+// app.get("/events", (req, res) => {
+//   res.render("pages/events")
+// })
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Server is listening.'));
 });

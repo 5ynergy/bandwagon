@@ -1,41 +1,46 @@
 const router = require("express").Router();
 const { Event, User } = require("../models");
+const withAuth = require('../utils/auth');
 
 //GET event data ONLY belonging to the logged-in User
-//!!!!!Need to figure out how to set the artist_id to the id of the User that is currently logged in
-//const artist_id =
-router.get("/dashboard/:id", async (req, res) => {
+router.get("/dashboard", //withAuth, commented out for handlebars testing
+async (req, res) => {
   try {
-    const dashboardData = await User.findByPk(req.params.id, {
-      include: [{ model: Event }],
+    //find the user whose id matches the user_id for current logged in user
+    const dashboardData = await Event.findAll({
+      where: { artist_id: //req.session.user_id commented out for handlebars testing
+    101 },
+      include: [{ model: User, attributes: ['name'] }]
     });
-    // This is for insomnia test
-    res.status(200).json(dashboardData);
-    //Add rendering to handlebars code below
-    //
-    //
+    // This is for test
+    // res.status(200).json(dashboardData);
+
+    const events= dashboardData.map((event) => event.get({plain: true}))
+    res.render("pages/dashboard", {events})
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 //POST new event event (must be logged in, current user id must match profile owner id) withauth
-router.post("/dashboard/:id", async (req, res) => {
+router.post("/dashboard", async (req, res) => {
   try {
-    const { event_name, date, content, artist_id, event_image, user_id } =
+    const { event_name, date, address, content, event_image, user_id } =
       req.body;
-    //!!!!!Need to figure out how to set the artist_id to the id of the User that is currently logged in
-    //const artist_id =
-    const newEvent = await Event.create({
+        const artist_id = 103//req.session.user_id 
+        //(change 103 -> req.session.user_id after handlebars to test)
+    const newEvent = await Event.create({ 
       event_name,
       date,
+      address,
       content,
-      //artist_id (add artist id back once figure out how to set it as the id of the User taht is currently logged in)
       artist_id,
       event_image,
       user_id,
     });
     res.status(200).json(newEvent);
+
   } catch (err) {
     res.status(500).json(err);
   }

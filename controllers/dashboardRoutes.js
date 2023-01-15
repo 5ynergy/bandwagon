@@ -24,13 +24,14 @@ router.get("/dashboard", async (req, res) => {
 //POST new event event (must be logged in, current user id must match profile owner id) withauth
 router.post("/dashboard", async (req, res) => {
   try {
-    const { event_name, date, content, artist_id, event_image, user_id } =
+    const { event_name, date, address, content, artist_id, event_image, user_id } =
       req.body;
     //!!!!!Need to figure out how to set the artist_id to the id of the User that is currently logged in
     //const artist_id =
     const newEvent = await Event.create({
       event_name,
       date,
+      address,
       content,
       //artist_id (add artist id back once figure out how to set it as the id of the User taht is currently logged in)
       artist_id,

@@ -84,27 +84,4 @@ router.get("/logout", (req, res) => {
 
 module.exports = router;
 
-// //Sample json data for Insomnia test:
-// [
-//   {
-//     "username": "graceIsCrying",
-//     "email": "gee.yao@gmail.com",
-//     "password": "imsotired123",
-//     "name": "Grace Yao",
-//     "bio": "When will this suffering end",
-//     "socials": "github.com/gyao1487",
-//     "genre_id": 3,
-//     "user_image": null
-//   }
-// ];
 
-// {
-// 	"username": "sadgirlmusic",
-//     "email": "sza@gmial.com",
-//     "password": "ijustkilledmyex",
-//     "name": "SZA",
-//     "bio": "I make sexy sad girl songs",
-//     "socials": "SZA on Apple Music",
-//     "genre_id": 3,
-//     "user_image": null
-// }

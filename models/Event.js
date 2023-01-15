@@ -21,7 +21,7 @@ Event.init(
       allowNull: false,
     },
     // !!!!!!! AHHHHHHHHHH I FORGOT LOCATIONNNNN AHHHHHHHHHHH GRRRRRRRRRRR
-    Address: {
+    address: {
       type: DataTypes.STRING,
       allowNull: false,
     },

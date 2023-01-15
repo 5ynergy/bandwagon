@@ -1,2 +1,6 @@
-/* This is wehre we will put css styling
-Public folder is for front end */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+

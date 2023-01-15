@@ -22,6 +22,16 @@ const userData = [
         "socials": "@sadboimusic",
         "genre_id": "5",
         "user_image": null
+      },
+      {
+        "username": "graceIsCrying",
+        "email": "gee.yao@gmail.com",
+        "password": "imsotired123",
+        "name": "Grace Yao",
+        "bio": "When will this suffering end",
+        "socials": "github.com/gyao1487",
+        "genre_id": 3,
+        "user_image": null
       }
   ]
 
@@ -30,16 +40,6 @@ const seedUsers = () => User.bulkCreate(userData)
 module.exports = seedUsers
 
 // //Sample json data for Insomnia test:
-//   {
-//     "username": "graceIsCrying",
-//     "email": "gee.yao@gmail.com",
-//     "password": "imsotired123",
-//     "name": "Grace Yao",
-//     "bio": "When will this suffering end",
-//     "socials": "github.com/gyao1487",
-//     "genre_id": 3,
-//     "user_image": null
-//   }
 
 // {
 // 	"username": "sadgirlmusic",

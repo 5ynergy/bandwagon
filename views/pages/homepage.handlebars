@@ -2,6 +2,9 @@
     <h1>Today's Date: <span id="todays-date"></span></h1>
     <div id="map">Map Goes Here</div>
     <div id="event-cards">Event Cards Go Here
-            {{!-- {{event cards}} from home fetch route --}}
+             {{#each events}}
+        {{> eventcard}}
+        {{/each}}
+
     </div>
 </section>

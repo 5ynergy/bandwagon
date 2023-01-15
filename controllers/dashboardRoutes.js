@@ -18,7 +18,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
   } catch (err) {
     res.status(500).json(err);
-    res.render("pages/accessDenied");
   }
 });
 
@@ -29,7 +28,7 @@ router.post("/dashboard", async (req, res) => {
       req.body;
         const artist_id = 103//req.session.user_id 
         //(change 103 -> req.session.user_id after handlebars to test)
-    const newEvent = await Event.create({
+    const newEvent = await Event.create({ 
       event_name,
       date,
       address,

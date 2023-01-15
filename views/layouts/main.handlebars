@@ -1,42 +1,68 @@
-{{!-- This is where we will put the main static layout for webpage
+{{! This is where we will put the main static layout for webpage
 We will add other handlebars files in main folder for each page.
-We will also use partials folder for partials --}}
-<!DOCTYPE html>
+We will also use partials folder for partials }}
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandwagon</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.js"></script>
-    {{!-- <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../public/css/style.css"> --}}
-</head>
-<nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.js"
+    ></script>
+    {{! <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css"> }}
+  </head>
+  <nav>
     <h1>Bandwagon</h1>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/events">Events</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/login">Log In</a></li>
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/signup">Logout</a></li>
-        <li><a href="/genres">Artist by Genre</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/events">Events</a></li>
+
+      <li>
+        <a href="/dashboard">Dashboard</a>
+        {{!-- <form id="dashboardform" method="get" action="/dashboard/req.session.user_id"></form>
+        <a onclick="document.getElementById('dashboardform').submit();">Dashboard</a> 
+                  GY: just something I tried, dont mind me--}}
+      </li>
+
+      {{! GY: For dashboard to work we will need to figure out how to push the logged in user's id into the request URL.
+            This is because we only want the dashboard to show the logged in user's events. It would look like dashboard/${req.session.user_id} 
+            as a placeholder because I'm still trying to figure out what the correct syntax is. 
+            Right now it is outputting : http://localhost:3001/dashboard/$%7Breq.session.user_id%7D which doesnt give us anything 
+            
+            I think what might be the issue is this current user_id is not part of a GET request because this is just the main layout.
+            Maybe we have to make the nav bar part of each page? So that we can pull the user id from the get request to render 
+            to the pages. Or maybe there is a handlebars helper function that can help do that? I need help on this TT^TT}} 
+
+      <li><a href="/profile">Profile</a></li>
+      {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
+
+      <li><a href="/login">Log In</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+      <li><a href="/logout" method="POST">Logout</a></li>
+      <li><a href="/genres">Artist by Genre</a></li>
     </ul>
-</nav>
-<body>
+  </nav>
+  <body>
     <main>
-    {{{ body }}}
+      {{{body}}}
     </main>
     <footer>
-        <p>All rights reserved. 2023.</p>
+      <p>All rights reserved. 2023.</p>
     </footer>
     {{!-- <script src="{{{ jsfile }}}"></script> --}}
-<!-- You MUST include jQuery before Fomantic -->
-{{!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-<script src="../../semantic/dist/semantic.min.js"></script> --}}
-</body>
+    <!-- You MUST include jQuery before Fomantic -->
+    {{! <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+<script src="../../semantic/dist/semantic.min.js"></script> }}
+  </body>
 </html>

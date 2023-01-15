@@ -25,7 +25,6 @@ router.post("/signup", async (req, res) => {
       res.status(200).json(newUser);
     });
 
-    // res.redirect("/login"); //After you sign in, it redirects you to login page where you can login
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -35,7 +34,7 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
       res
@@ -56,11 +55,14 @@ router.post("/login", async (req, res) => {
 
     // Create session variables based on the logged in user -  !!! This is key for the requests that requires the current userid) !!!
     req.session.save(() => {
-      req.session.user_id = userData.id; //This is what we probably will use for routes for logged in user
+      req.session.user_id = userData.id; 
+      //CONFIRMED console logging req.session.user_id returns the user_id of the logged in person 
       req.session.logged_in = true;
 
-      res.json({ user: userData, message: "You are now logged in!" });
+      // res.json({ user: userData, message: "You are now logged in!" });
+      
     });
+    res.render("pages/homepage")
   } catch (err) {
     res.status(400).json(err);
   }
@@ -73,7 +75,7 @@ router.post("/logout", (req, res) => {
       res.status(204).end();
     });
     
-    // res.redirect("/");
+    res.redirect("/login");
   } else {
     res.status(404).end();
   }

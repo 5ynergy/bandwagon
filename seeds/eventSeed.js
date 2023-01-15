@@ -22,3 +22,12 @@ const eventData = [
 const seedEvents = () => Event.bulkCreate(eventData)
 
 module.exports = seedEvents
+
+// sample input Data
+// [{
+//   "event_name": "This might work!",
+//   "date": "2023-01-07 16:00:00",
+//   "content": "If you see this, it's working",
+//   "artist_id": 103,
+//   "event_image": null
+// }]

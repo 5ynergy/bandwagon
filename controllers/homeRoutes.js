@@ -8,7 +8,8 @@ router.get("/", async (req, res) => {
           //!!!! NEED TO FIGURE OUT HOW TO FILTER BY DATE
           include: [{ model: User }],
         });
-        res.status(200).json(dbEventData);
+        // res.status(200).json(dbEventData);
+        res.render("pages/homepage")
     //Insert handlebars code
       } catch (err) {
         console.log(err);
@@ -17,15 +18,16 @@ router.get("/", async (req, res) => {
 });
 
 
-//Login and logout
-    //Login route to redirect to profile /profile (so that new artist can edit details) -->
-    //If a session exists, redirect the request to the homepage
+//GET route for rendering login page
+router.get("/login", (req,res) => {
+    res.render('pages/login')
+});
 
-    //Logout route
+//GET route for rendering sign up page
+router.get('/signup', (req, res) => {
+    res.render('pages/signup')
+})
 
-    //Signup route --> modal pops up where you enter artist data
-    //POST artist data by signing up
+//Login/logout/signup POST routes - these will be found in User Routes
 
-
-    
 module.exports = router;

@@ -1,13 +1,22 @@
 const router = require("express").Router();
 const { User, Event, Genre } = require("../models");
+const { Op } = require("sequelize");
 
 //GET the homepage to render including events today
 router.get("/", async (req, res) => {
   try {
+    //GET events ONLY whose date/time are between the start(00:00:00) and end (23:59:59) of today
+    let todayStart = new Date();
+    todayStart.setUTCHours(0, 0, 0, 0);
+    let todayEnd = new Date();
+    todayEnd.setUTCHours(23, 59, 59, 0);
+    console.log(todayStart);
+    console.log(todayEnd);
     const HomeData = await Event.findAll({
-      //!!!! NEED TO FIGURE OUT HOW TO FILTER BY DATE
-      include: [{ model: User, attributes: ['name'] }],
+      where: { date: { [Op.gt]: todayStart, [Op.lt]: todayEnd } },
+      include: [{ model: User, attributes: ["name"] }],
     });
+    console.log(HomeData);
     // res.status(200).json(dbEventData);
 
     //Handlebars:

@@ -4,18 +4,15 @@ const { Event, User } = require("../models");
 // GET all events ('/events') to render on events page
 router.get("/events", async (req, res) => {
   try {
-    const dbEventData = await Event.findAll({
+    const allEvents = await Event.findAll({
       //Will find out how to filter by date later
-      include: [{ model: User }],
+      include: [{ model: User, attributes: ["name"] }],
     });
-    // //This is for insomnia test: WORKS!
-    res.status(200).json(dbEventData);
+    // res.status(200).json(dbEventData); for testing
 
     //This is code for handlebars:
-    // const events = dbEventdata.map((event) =>
-    //     event.get({ plain: true })
-    // );
-    // res.render("events", {layout:"main", events});
+    const events = allEvents.map((event) => event.get({ plain: true }));
+    res.render("pages/events", { events });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -32,10 +29,10 @@ router.get("/events/:id", async (req, res) => {
       res.render("pages/404");
     }
     // This is for insomnia test
-    res.status(200).json(dbEventData);
-    //Add rendering to handlebars code below
-    //
-    //
+    // res.status(200).json(dbEventData);
+   
+    //Handlebars:
+    res.render("pages/eventdetails")
   } catch (err) {
     res.status(500).json(err);
   }

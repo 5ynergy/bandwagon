@@ -1,9 +1,10 @@
-{{!-- Grace: testing if events can be gotten here --}}
+{{!-- Can use this as a template for partials functionality --}}
 <section>
     <h1>All Events</h1>
     <h3>See everything that's happening near you.</h3>
     <div id="event-cards">
-        {{#each events as |eventcard|}}
+        {{#each events}}
+        {{> eventcard}}
         {{/each}}
 
     </div>

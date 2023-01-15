@@ -9,11 +9,8 @@ router.get("/genres", async (req, res) => {
       include: [{ model: User }],
     });
     //This is for insomnia test:
-    res.status(200).json(dbGenreData);
-    //TODO: Insert render code for handlebars:
-    //
-    //
-    //
+    // res.status(200).json(dbGenreData);
+    res.render("pages/genres")
   } catch (err) {
     res.status(500).json(err);
   }

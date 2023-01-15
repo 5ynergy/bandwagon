@@ -78,7 +78,7 @@ router.get("/logout", (req, res) => {
     //redirects to homepage after logged out
     res.redirect("/");
   } else {
-    res.status(404).end();
+    res.render("pages/404");
   }
 });
 

@@ -20,7 +20,6 @@ Event.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    // !!!!!!! AHHHHHHHHHH I FORGOT LOCATIONNNNN AHHHHHHHHHHH GRRRRRRRRRRR
     address: {
       type: DataTypes.STRING,
       allowNull: false,

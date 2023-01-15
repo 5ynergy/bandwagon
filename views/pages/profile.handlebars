@@ -1,5 +1,6 @@
-{{!-- Render artist details, GET route with user id --}}
-{{!-- The genres associated with the artist --}}
+{{!-- Render artist details. Will have to use localhost:3001/artist/101 to test the rendering
+because I've made the profile route only accessible after login and to show the specific user's
+info --}}
 {{!-- Uploading image --}}
 
 <section>
@@ -8,3 +9,5 @@
     <div id="artist-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quisquam vel impedit harum quam fugit maiores, assumenda accusantium unde dolores necessitatibus, ipsa nihil optio sit suscipit quas dolorem. Perferendis, laudantium?</div>
     <div id="artist-socials"></div>
 </section>
+
+{{!-- Might need a conditional render for edit functionality for only logged in users. --}}

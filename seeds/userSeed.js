@@ -30,7 +30,6 @@ const seedUsers = () => User.bulkCreate(userData)
 module.exports = seedUsers
 
 // //Sample json data for Insomnia test:
-// [
 //   {
 //     "username": "graceIsCrying",
 //     "email": "gee.yao@gmail.com",
@@ -41,7 +40,6 @@ module.exports = seedUsers
 //     "genre_id": 3,
 //     "user_image": null
 //   }
-// ];
 
 // {
 // 	"username": "sadgirlmusic",

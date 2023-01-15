@@ -13,7 +13,6 @@ router.get("/dashboard", async (req, res) => {
     // This is for insomnia test
     res.status(200).json(dashboardData);
     //HANDLEBARS:
-    //note: Grace is still figuring out how to insert id into URL
     //
     //
   } catch (err) {

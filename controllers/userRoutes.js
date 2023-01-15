@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
 
     // Create session variables based on the logged in user -  !!! This is key for the requests that requires the current userid) !!!
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.id; //This is what we probably will use for routes for logged in user
       req.session.logged_in = true;
 
       res.json({ user: userData, message: "You are now logged in!" });
@@ -72,6 +72,7 @@ router.post("/logout", (req, res) => {
     req.session.destroy(() => {
       res.status(204).end();
     });
+    
     // res.redirect("/");
   } else {
     res.status(404).end();
@@ -93,3 +94,14 @@ module.exports = router;
 //     "user_image": null
 //   }
 // ];
+
+// {
+// 	"username": "sadgirlmusic",
+//     "email": "sza@gmial.com",
+//     "password": "ijustkilledmyex",
+//     "name": "SZA",
+//     "bio": "I make sexy sad girl songs",
+//     "socials": "SZA on Apple Music",
+//     "genre_id": 3,
+//     "user_image": null
+// }

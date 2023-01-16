@@ -1,8 +1,26 @@
 <section>
     <h1>Dashboard Page</h1>
     <div id="sidebar"></div>
-    <div id="eventfeed"></div>
-    <div id="create-event"><button>Create Event</button></div>
+   
+
+ <h2>Got an event coming up? Give us the details!</h2>
+    <form action="/dashboard" method ="POST">
+        <label for="username">Name of the event</label><br>
+        <input type="text" name="event_name"><br>
+        <label for="password">Date</label><br>
+        <input type="text" name = "date"><br>
+        <label for="email" >Location</label><br>
+        <input type="text" name ="address"><br><br>
+        <label for="artist-name">Information about the event</label><br>
+        <input type="text" name="content"><br>
+        {{!-- Add image upload after cloudinary --}}
+         <button class="ui primary button" type = "submit">Create event</button>
+    </form> 
+ <div id="eventfeed">  
+        {{#each events}}
+        {{> eventcard}}
+        {{/each}}
+</div>
 </section>
 
 {{!-- create Event cards for specific artist by User --}}

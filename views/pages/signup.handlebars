@@ -1,4 +1,5 @@
 {{!-- You can refer to login.handlebars for refernce on form to POST functionality --}}
+  
 <section>
     <h1>Sign Up</h1>
     <form action="/signup" method ="POST">
@@ -7,16 +8,17 @@
         <label for="password">Password</label><br>
         <input type="text" name = "password"><br>
         <label for="email" >Email</label><br>
-        <input type="text"><br><br>
+        <input type="text" name ="email"><br><br>
         <label for="artist-name">Artist/Band Name</label><br>
-        <input type="text" ><br>
-        <label for="spotify-username">Spotify Username</label><br>
-        <input type="text"><br>
+        <input type="text" name="name"><br>
+        {{!-- <label for="spotify-username">Spotify Username</label><br>
+        <input type="text" name="socials"><br> --}}
         <label for="bio">Bio</label><br>
-        <input type="text"><br>
-        <label for="spotify-username">Social Media Links</label><br>
-        <input type="text"><br><br>
-        <input type="submit" value="submit">
+        <input type="text" name ="bio"><br>
+          {{!-- Need to insert dropdown field to select genre. Can use genre names in the genreSeed file --}}
+        <label for="socials">Social Media Links</label><br>
+        <input type="text" name="socials"><br><br>
+         <button class="ui primary button" type = "submit">Sign up!</button>
     </form> 
 </section>
 

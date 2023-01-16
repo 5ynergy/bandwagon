@@ -1,8 +1,8 @@
 {{!-- Can use this as a template for partials functionality --}}
 <section>
     <h1>All Events</h1>
-    <h3>See everything that's happening near you.</h3>
-    <div id="event-cards">
+    <h2>See everything that's happening near you.</h2>
+    <div id="event-cards" class="ui grid container">
         {{#each events}}
         {{> eventcard}}
         {{/each}}

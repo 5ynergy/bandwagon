@@ -8,8 +8,10 @@ async (req, res) => {
   try {
     //find the user whose id matches the user_id for current logged in user
     const dashboardData = await Event.findAll({
-      where: { artist_id: //req.session.user_id (commented out for handlebars testing)
-    101 },
+      where: { artist_id: req.session.user_id 
+    //   (commented out for handlebars testing)
+    // 101 
+},
       include: [{ model: User, attributes: ['name'] }]
     });
     // This is for test
@@ -28,7 +30,7 @@ router.post("/dashboard", async (req, res) => {
   try {
     const { event_name, date, address, content, event_image, user_id } =
       req.body;
-        const artist_id = 103//req.session.user_id 
+        const artist_id = req.session.user_id 
         //(change 103 -> req.session.user_id after handlebars to test)
     const newEvent = await Event.create({ 
       event_name,

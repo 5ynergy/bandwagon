@@ -7,10 +7,10 @@ We will also use partials folder for partials }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandwagon</title>
+
     <link rel="stylesheet" href="../../public/css/normalize.css">
     <link rel="stylesheet" href="../../public/css/style.css">
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"
     ></script>
     <link
       rel="stylesheet"
@@ -20,34 +20,34 @@ We will also use partials folder for partials }}
     <script
       src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.js"
     ></script>
-    {{! <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../public/css/style.css"> }}
-  </head>
-  <nav>
-    <h1>Bandwagon</h1>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/events">Events</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/profile">Profile</a></li>
-      {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
-
-      <li><a href="/login">Log In</a></li>
-      <li><a href="/signup">Sign Up</a></li>
-      <li><a href="/logout">Logout</a></li>
-      <li><a href="/genres">Artist by Genre</a></li>
-    </ul>
-  </nav>
+    <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    </head>
   <body>
-    <main>
+    <nav class="ui pointing menu">
+    <div class="left menu">
+      <h1 class="item">BANDWAGON</h1>
+    </div>
+    {{!-- <ul class="right menu"> --}}
+    <div class="right menu">
+      <li class="item"><p><a href="/">Home</a></p></li>
+      <li class="item"><a href="/events">Events</a></li>
+      <li class="item"><a href="/dashboard">Dashboard</a></li>
+      <li class="item"><a href="/profile">Profile</a></li>
+      {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
+      
+      <li class="item"><a href="/genres">Artist by Genre</a></li>
+      <li class="item"><a href="/login">Log In</a></li>
+      <li class="item"><a href="/logout">Logout</a></li>
+      <li class="item"><a href="/signup">Sign Up</a></li>
+    </div>
+    {{!-- </ul> --}}
+  </nav>
+    <main class="ui segment">
       {{{body}}}
     </main>
     <footer>
       <p>All rights reserved. 2023.</p>
     </footer>
-    {{!-- <script src="{{{ jsfile }}}"></script> --}}
-    <!-- You MUST include jQuery before Fomantic -->
-    {{! <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-<script src="../../semantic/dist/semantic.min.js"></script> }}
   </body>
 </html>

@@ -1,6 +1,37 @@
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
+h1 {
+    text-align: center;
+}
+
+h1.item {
+    padding: 0px;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.menu .item {
+    min-width: 150px;
+    justify-content: center;
+}
+
+div.ui.middle.aligned.center.grid {
+    max-width: 500px;
+}
+
+main.ui.center {
+    justify-content: center;
+}
+
+/* body > main > div > div {
+    justify-content: center;
+} */
 

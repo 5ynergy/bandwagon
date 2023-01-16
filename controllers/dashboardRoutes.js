@@ -3,14 +3,13 @@ const { Event, User } = require("../models");
 const withAuth = require('../utils/auth');
 
 //GET event data ONLY belonging to the logged-in User
-router.get("/dashboard", //withAuth, commented out for handlebars testing
+router.get("/dashboard", withAuth, 
 async (req, res) => {
   try {
     //find the user whose id matches the user_id for current logged in user
     const dashboardData = await Event.findAll({
-      where: { artist_id: //req.session.user_id 
-    //   (commented out for handlebars testing)
-    101 
+      where: { artist_id: req.session.user_id 
+    //   (commented out for handlebars testing) 
 },
       include: [{ model: User, attributes: ['name'] }]
     });

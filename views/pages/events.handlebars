@@ -4,7 +4,9 @@
     <h2>See everything that's happening near you.</h2>
     <div id="event-cards" class="ui grid container">
         {{#each events}}
+        <div class="four wide column">
         {{> eventcard}}
+        </div>
         {{/each}}
     </div>
     <p><a href="/">Return Home</a></p>

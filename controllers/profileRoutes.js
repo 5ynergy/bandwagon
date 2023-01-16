@@ -4,7 +4,7 @@ const connection = require("../server");
 const withAuth = require("../utils/auth")
 
 //GET ROUTE for artist profile with login
-router.get("/profile", //withAuth, temporarily disabled with auth for handlebars testing
+router.get("/profile", withAuth,
 async (req, res) => {
   try {
     const profileData = await User.findByPk(req.params.id, {

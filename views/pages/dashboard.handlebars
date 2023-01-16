@@ -1,10 +1,48 @@
 <section>
     <h1>Dashboard Page</h1>
     <div id="sidebar"></div>
-   
 
- <h2>Got an event coming up? Give us the details!</h2>
-    <form action="/dashboard" method ="POST">
+<div class="ui grid">
+
+<div id="form-div" class="four wide column">
+   <h2>Got an event coming up? Give us the details!</h2>
+   <form action="/dashboard" method ="POST" class="ui form">
+   <div class="field">
+      <label>Name of Event</label>
+      <input type="text" name="event_name" placeholder="Name of Event">
+   </div>
+   <div class="field">
+      <label>Date</label>
+      <input type="text" name="date" placeholder="YYYY-MM-DD HH:MM:SS">
+   </div>
+   <div class="field">
+      <label>Location</label>
+      <input type="text" name="address" placeholder="Location/Address">
+   </div>
+   <div class="field">
+      <label>Information About Event</label>
+      <input type="text" name="content" placeholder="Event Details">
+   </div>
+   <button class="ui button" type="submit">Submit</button>
+   </form>
+</div>
+
+<div id="event-div" class="ui twelve wide column">
+   <div class="ui four column grid">
+   <div id="eventfeed" class="row">  
+        {{#each events}}
+        <div class="column">
+        {{> eventcard}}
+        </div>
+        {{/each}}
+   </div>
+   </div>
+</div>
+
+</div>   
+
+
+    {{!-- <form action="/dashboard" method ="POST">
         <label for="username">Name of the event</label><br>
         <input type="text" name="event_name"><br>
         <label for="password">Date</label><br>
@@ -13,15 +51,12 @@
         <input type="text" name ="address"><br><br>
         <label for="artist-name">Information about the event</label><br>
         <input type="text" name="content"><br>
-        {{!-- Add image upload after cloudinary --}}
+        Add image upload after cloudinary 
          <button class="ui primary button" type = "submit">Create event</button>
-    </form> 
- <div id="eventfeed">  
-        {{#each events}}
-        {{> eventcard}}
-        {{/each}}
-</div>
+    </form>  --}}
+ 
 </section>
+
 
 {{!-- create Event cards for specific artist by User --}}
 {{!-- Form to create new event + create event button --}}

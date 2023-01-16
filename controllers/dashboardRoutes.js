@@ -8,9 +8,9 @@ async (req, res) => {
   try {
     //find the user whose id matches the user_id for current logged in user
     const dashboardData = await Event.findAll({
-      where: { artist_id: req.session.user_id 
+      where: { artist_id: //req.session.user_id 
     //   (commented out for handlebars testing)
-    // 101 
+    101 
 },
       include: [{ model: User, attributes: ['name'] }]
     });

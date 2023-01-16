@@ -35,7 +35,7 @@ router.get("/login", (req, res) => {
 
 //GET route for rendering sign up page
 router.get("/signup", (req, res) => {
-  res.render("pages/signup");
+  res.render("pages/signup", {jsFile: "signup.js"});
 });
 
 //Login/logout/signup POST routes - these will be found in User Routes

@@ -1,32 +1,42 @@
 const router = require("express").Router();
 const { User, Event, Genre } = require("../models");
+const { Op } = require("sequelize");
 
-//GET the homepage to render including events within cetain date
+//GET the homepage to render including events today
 router.get("/", async (req, res) => {
-    try {
-        const dbEventData = await Event.findAll({
-          //!!!! NEED TO FIGURE OUT HOW TO FILTER BY DATE
-          include: [{ model: User }],
-        });
-        // res.status(200).json(dbEventData);
-        res.render("pages/homepage")
-    //Insert handlebars code
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
+  try {
+    //GET events ONLY whose date/time are between the start(00:00:00) and end (23:59:59) of today
+    let todayStart = new Date();
+    todayStart.setUTCHours(0, 0, 0, 0);
+    let todayEnd = new Date();
+    todayEnd.setUTCHours(23, 59, 59, 0);
+    console.log(todayStart);
+    console.log(todayEnd);
+    const HomeData = await Event.findAll({
+      where: { date: { [Op.gt]: todayStart, [Op.lt]: todayEnd } },
+      include: [{ model: User, attributes: ["name"] }],
+    });
+    console.log(HomeData);
+    // res.status(200).json(dbEventData);
+
+    //Handlebars:
+    const events = HomeData.map((event) => event.get({ plain: true }));
+    res.render("pages/homepage", { events });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
-
 //GET route for rendering login page
-router.get("/login", (req,res) => {
-    res.render('pages/login')
+router.get("/login", (req, res) => {
+  res.render("pages/login");
 });
 
 //GET route for rendering sign up page
-router.get('/signup', (req, res) => {
-    res.render('pages/signup')
-})
+router.get("/signup", (req, res) => {
+  res.render("pages/signup");
+});
 
 //Login/logout/signup POST routes - these will be found in User Routes
 

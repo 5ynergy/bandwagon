@@ -1,8 +1,6 @@
 //Routes for artist data
 const router = require("express").Router();
 const { Event, User, Genre } = require("../models");
-
-
 //POST artist route is in homeRoutes because you input artist data when you sign up >>>>>
 
 //GET artist by ID (listener view) 

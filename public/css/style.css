@@ -1,5 +1,9 @@
-/* This is where we will put css styling
-Public folder is for front end */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 h1 {
     text-align: center;
@@ -30,3 +34,4 @@ main.ui.center {
 /* body > main > div > div {
     justify-content: center;
 } */
+

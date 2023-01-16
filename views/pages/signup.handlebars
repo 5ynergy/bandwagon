@@ -1,26 +1,105 @@
-{{!-- You can refer to login.handlebars for refernce on form to POST functionality --}}
-  
+{{! You can refer to login.handlebars for refernce on form to POST functionality }}
 <section>
-    <h1>Sign Up</h1>
-    <form action="#" >
-        <label for="username">Username</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password</label><br>
-        <input type="text" id="password" name = "password"><br>
-        <label for="email" >Email</label><br>
-        <input type="text" id="email" name ="email"><br><br>
-        <label for="artist-name">Artist/Band Name</label><br>
-        <input type="text" id="name" name="name"><br>
-        {{!-- <label for="spotify-username">Spotify Username</label><br>
-        <input type="text" name="socials"><br> --}}
-        <label for="bio">Bio</label><br>
-        <input type="text" id="bio" name ="bio"><br>
-          {{!-- Need to insert dropdown field to select genre. Can use genre names in the genreSeed file --}}
-        <label for="socials">Social Media Links</label><br>
-        <input type="text" id="socials" name="socials"><br><br>
-        <label for="socials">Profile Picture</label><br>
-        <input type="file" id="profile_picture" name="profile_picture"><br><br>
-         <button class="ui primary button" id="submit" type = "submit">Sign up!</button>
-    </form> 
-</section>
+  <h1>Sign Up</h1>
 
+  <form action="#" class="ui form">
+    <div class="field">
+      <label>Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username here"
+      />
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        placeholder="Enter password here"
+      />
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Enter email here"
+      />
+    </div>
+    <div class="field">
+      <label>Artist/Band Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter artist/band name here"
+      />
+    </div>
+    <div class="field">
+      <label>Bio</label>
+      <input
+        type="text"
+        id="bio"
+        name="bio"
+        placeholder="Enter artist biography here"
+      />
+    </div>
+    <div class="field">
+      <label>Socials</label>
+      <input
+        type="text"
+        id="socials"
+        name="socials"
+        placeholder="Enter social media links here"
+      />
+    </div>
+    <select class="ui selection dropdown">
+      <option value="">Genre</option>
+      <option value="0">R&B</option>
+      <option value="1">Pop</option>
+      <option value="2">Hip-Hop</option>
+      <option value="3">Latin</option>
+      <option value="4">Electronic</option>
+      <option value="5">DJ</option>
+      <option value="6">Dance/Alternative</option>
+      <option value="7">Rock</option>
+      <option value="8">Indie</option>
+      <option value="9">Soul/Funk</option>
+      <option value="10">Folk/Acoustic</option>
+      <option value="11">Metal</option>
+      <option value="12">Blues</option>
+      <option value="13">Country</option>
+    </select>
+    </div>
+    <div class="ui file input">
+      <input type="file" id="profile_picture" name="profile_picture" />
+    </div>
+    <button class="ui primary button" id="submit" type="submit">Sign up!</button>
+  </form>
+
+  <form action="#">
+    <label for="username">Username</label><br />
+    <input type="text" id="username" name="username" /><br />
+    <label for="password">Password</label><br />
+    <input type="text" id="password" name="password" /><br />
+    <label for="email">Email</label><br />
+    <input type="text" id="email" name="email" /><br /><br />
+    <label for="artist-name">Artist/Band Name</label><br />
+    <input type="text" id="name" name="name" /><br />
+    {{! <label for="spotify-username">Spotify Username</label><br>
+        <input type="text" name="socials"><br> }}
+    <label for="bio">Bio</label><br />
+    <input type="text" id="bio" name="bio" /><br />
+    {{! Need to insert dropdown field to select genre. Can use genre names in the genreSeed file }}
+    <label for="socials">Social Media Links</label><br />
+    <input type="text" id="socials" name="socials" /><br /><br />
+    <label for="socials">Profile Picture</label><br />
+    <input type="file" id="profile_picture" name="profile_picture" /><br /><br
+    />
+    <button class="ui primary button" id="submit" type="submit">Sign up!</button>
+  </form>
+</section>

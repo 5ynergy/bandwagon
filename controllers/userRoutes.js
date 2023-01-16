@@ -1,11 +1,16 @@
 const router = require("express").Router();
 const { User, Genre } = require("../models");
+const uploadImage = require("../cloudinary upload/uploadimage.js")
 
 // CREATE new user
 router.post("/signup", async (req, res) => {
   try {
-    const {username, email, password, name, bio, socials,genre_id,user_image} = req.body
-    // Need to figure out how to translate Front End Input genre name into genre_id for the back end
+    // console.log(req.body)
+    const {username, email, password, name, bio, socials, genre_id, user_image} = req.body
+    const image = uploadImage(user_image)
+    .then(async (url) => {
+      // console.log(url.secure_url)
+      // Need to figure out how to translate Front End Input genre name into genre_id for the back end
     //const genre_id = front end input genre_name.id or something
     const newUser = await User.create({
       //Credentials
@@ -18,13 +23,17 @@ router.post("/signup", async (req, res) => {
       bio,
       socials,
       genre_id, //Need to figure out how to translate front end input (Genre name) to genre_id when submitted to database
-      user_image,
+      user_image: url.secure_url,
     });
     req.session.save(() => {
       req.session.loggedIn = true;
       res.status(200).json(newUser);
     });
-
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    console.log(image)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

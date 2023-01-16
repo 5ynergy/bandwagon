@@ -2,23 +2,25 @@
   
 <section>
     <h1>Sign Up</h1>
-    <form action="/signup" method ="POST">
+    <form action="#" >
         <label for="username">Username</label><br>
-        <input type="text" name="username"><br>
+        <input type="text" id="username" name="username"><br>
         <label for="password">Password</label><br>
-        <input type="text" name = "password"><br>
+        <input type="text" id="password" name = "password"><br>
         <label for="email" >Email</label><br>
-        <input type="text" name ="email"><br><br>
+        <input type="text" id="email" name ="email"><br><br>
         <label for="artist-name">Artist/Band Name</label><br>
-        <input type="text" name="name"><br>
+        <input type="text" id="name" name="name"><br>
         {{!-- <label for="spotify-username">Spotify Username</label><br>
         <input type="text" name="socials"><br> --}}
         <label for="bio">Bio</label><br>
-        <input type="text" name ="bio"><br>
+        <input type="text" id="bio" name ="bio"><br>
           {{!-- Need to insert dropdown field to select genre. Can use genre names in the genreSeed file --}}
         <label for="socials">Social Media Links</label><br>
-        <input type="text" name="socials"><br><br>
-         <button class="ui primary button" type = "submit">Sign up!</button>
+        <input type="text" id="socials" name="socials"><br><br>
+        <label for="socials">Profile Picture</label><br>
+        <input type="file" id="profile_picture" name="profile_picture"><br><br>
+         <button class="ui primary button" id="submit" type = "submit">Sign up!</button>
     </form> 
 </section>
 

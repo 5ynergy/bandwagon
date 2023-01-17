@@ -14,7 +14,7 @@ router.get("/events", async (req, res) => {
     });
     // res.status(200).json(dbEventData); for testing
 
-    //This is code for handlebars:
+    //Handlebars:
     const events = allEvents.map((event) => event.get({ plain: true }));
     res.render("pages/events", { events });
   } catch (err) {

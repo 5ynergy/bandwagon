@@ -26,7 +26,7 @@ router.post("/signup", async (req, res) => {
       user_image: url.secure_url,
     });
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
       res.status(200).json(newUser);
     });
     })
@@ -69,9 +69,9 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // res.json({ user: userData, message: "You are now logged in!" });
-      
     });
-    res.render("pages/homepage")
+
+    res.render("pages/homepage");
   } catch (err) {
     res.status(400).json(err);
   }
@@ -85,7 +85,8 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    res.redirect("/");
+    // res.redirect("/");
+    res.render("/dashboard")
   } else {
     res.render("pages/404");
   }

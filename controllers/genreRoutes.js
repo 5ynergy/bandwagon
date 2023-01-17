@@ -8,9 +8,11 @@ router.get("/genres", async (req, res) => {
     const dbGenreData = await Genre.findAll({
       include: [{ model: User }],
     });
+    const genres = dbGenreData.map((genre) => genre.get({ plain: true }));
+
+    res.render("pages/genres", { genres });
     //This is for insomnia test:
     // res.status(200).json(dbGenreData);
-    res.render("pages/genres")
   } catch (err) {
     res.status(500).json(err);
   }

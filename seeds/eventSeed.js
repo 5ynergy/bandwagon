@@ -4,7 +4,7 @@ const eventData = [
     {
       "id": 1,
       "event_name": "Fallapalooza",
-      "date": "2023-01-15 5:30:00",
+      "date": "2023-01-20 5:30:00",
       "address": "Your mom's house",
       "content": "Kick off fall with these goofs and their funky music!",
       "artist_id": 101,
@@ -13,7 +13,7 @@ const eventData = [
     {
         "id": 2,
         "event_name": "Dark at 4pm",
-        "date": "2023-01-15 16:00:00",
+        "date": "2023-01-20 16:00:00",
         "address": "the sunken place",
         "content": "Curb your seasonal depression with some fun tunes!",
         "artist_id": 102,
@@ -21,40 +21,49 @@ const eventData = [
     },
  {
       "id": 3,
-      "event_name": "Fallapalooza",
-      "date": "2023-10-07 5:30:00",
+      "event_name": "Crying Time",
+      "date": "2023-01-17 5:30:00",
       "address": "Your mom's house",
       "content": "Kick off fall with these goofs and their funky music!",
-      "artist_id": 101,
+      "artist_id": 103,
       "event_image": null
     },
     {
         "id": 4,
-        "event_name": "Dark at 4pm",
-        "date": "2023-01-07 16:00:00",
+        "event_name": "Crying Screaming Throwing Up",
+        "date": "2023-01-17 16:00:00",
         "address": "the sunken place",
         "content": "Curb your seasonal depression with some fun tunes!",
-        "artist_id": 102,
+        "artist_id": 103,
         "event_image": null
     },
     {
       "id": 5,
-      "event_name": "Fallapalooza",
-      "date": "2023-10-07 5:30:00",
+      "event_name": "Sliding Up the Wall",
+      "date": "2023-01-17 5:30:00",
       "address": "Your mom's house",
       "content": "Kick off fall with these goofs and their funky music!",
-      "artist_id": 101,
+      "artist_id": 103,
       "event_image": null
     },
     {
         "id": 6,
-        "event_name": "Dark at 4pm",
-        "date": "2023-01-07 16:00:00",
+        "event_name": "Help",
+        "date": "2023-01-17 16:00:00",
         "address": "the sunken place",
         "content": "Curb your seasonal depression with some fun tunes!",
-        "artist_id": 102,
+        "artist_id": 103,
         "event_image": null
-    }
+    },
+    {
+      "id": 7,
+      "event_name": "Youre not supposed to see this",
+      "date": "2023-01-07 16:00:00",
+      "address": "the sunken place",
+      "content": "Curb your seasonal depression with some fun tunes!",
+      "artist_id": 102,
+      "event_image": null
+  }
 ]
 
 const seedEvents = () => Event.bulkCreate(eventData)

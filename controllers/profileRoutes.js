@@ -11,7 +11,7 @@ async (req, res) => {
       include: [{ model: Genre, attributes: ['name'] }],
     });
     // res.status(200).json(profileData);
-    res.render("pages/profile")
+    res.render("pages/profile", {loggedIn: req.session.logged_in})
 
   } catch (err) {
     res.status(500).json(err);

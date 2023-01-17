@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Genre } = require("../models");
-const uploadImage = require("../cloudinary upload/uploadimage.js")
+const uploadImage = require("../cloudinary_upload/uploadimage.js")
 
 // CREATE new user
 router.post("/signup", async (req, res) => {
@@ -27,6 +27,7 @@ router.post("/signup", async (req, res) => {
     });
     req.session.save(() => {
       req.session.logged_in = true;
+      req.session.user_id = newUser.id //passing the user id
       res.status(200).json(newUser);
     });
     })
@@ -69,9 +70,8 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // res.json({ user: userData, message: "You are now logged in!" });
+      res.redirect("/dashboard");
     });
-
-    res.render("pages/homepage");
   } catch (err) {
     res.status(400).json(err);
   }
@@ -85,8 +85,8 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    // res.redirect("/");
-    res.render("/dashboard")
+    res.render("/");
+    // res.json({message: "Logged out successfully."})
   } else {
     res.render("pages/404");
   }

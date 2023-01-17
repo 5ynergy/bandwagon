@@ -17,7 +17,7 @@ async (req, res) => {
     // res.status(200).json(dashboardData);
 
     const events= dashboardData.map((event) => event.get({plain: true}))
-    res.render("pages/dashboard", {events})
+    res.render("pages/dashboard", {events, loggedIn: req.session.logged_in})
 
   } catch (err) {
     res.status(500).json(err);

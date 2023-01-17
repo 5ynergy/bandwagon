@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
     const events = HomeData.map((event) => event.get({ plain: true }));
     res.render("pages/homepage", { events, loggedIn: req.session.logged_in });
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
     res.status(500).json(err);
   }
 });

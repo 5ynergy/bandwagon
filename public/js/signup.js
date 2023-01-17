@@ -32,7 +32,10 @@ const submitUser = (data) => {
     axios.post("http://localhost:3001/signup", data)
     .then((results) => {
         console.log(results.data)
+        //if the results are okay redirect to the dashboard
+        document.location.replace("/dashboard")
     }).catch((error) => {
+        alert("There was a problem with the signup. Try again later.")
         console.log(error)
     })
 }

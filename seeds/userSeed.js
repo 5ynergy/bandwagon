@@ -27,12 +27,13 @@ const userData = [
         "username": "graceIsCrying",
         "email": "gee.yao@gmail.com",
         "password": "imsotired123",
-        "name": "Grace Yao",
+        "name": "Grace",
         "bio": "When will this suffering end",
         "socials": "github.com/gyao1487",
         "genre_id": 3,
         "user_image": null
-      }
+      },
+
   ]
 
 const seedUsers = () => User.bulkCreate(userData)

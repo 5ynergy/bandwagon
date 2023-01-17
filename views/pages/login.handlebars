@@ -19,22 +19,22 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form" action="/login" method="POST">
+    <form class="ui large form login-form" action="/login" method="POST">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="username" id="username-login" placeholder="Username">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" id="password-login" name="password" placeholder="Password">
           </div>
         </div>
         {{!-- I changed the below div to button so that the login functionality works --}}
-        <button type="button" class="ui fluid large teal submit button">Login</button>
+        <button type="submit" class="ui fluid large teal submit button">Login</button>
       </div>
 
       <div class="ui error message"></div>
@@ -46,3 +46,5 @@
     </div>
   </div>
 </div>
+
+{{!-- <script src="/public/js/login.js"></script> --}}

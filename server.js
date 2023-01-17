@@ -33,9 +33,10 @@ const { engine } = require("express-handlebars")
 app.engine("handlebars", engine({defaultLayout: "main"}))
 app.set("view engine", "handlebars") //second param. is the file extension
 
-// app.get("/events", (req, res) => {
-//   res.render("pages/events")
-// })
+//GET route for homepage
+app.get("/", (req, res) => {
+  res.render("pages/homepage")
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Server is listening.'));

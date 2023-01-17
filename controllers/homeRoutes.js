@@ -17,12 +17,12 @@ router.get("/", async (req, res) => {
       include: [{ model: User, attributes: ["name"] }],
     });
     console.log(HomeData);
-    console.log(req.session.loggedIn);
+    console.log(req.session.logged_in);
     // res.status(200).json(dbEventData);
 
     //Handlebars:
     const events = HomeData.map((event) => event.get({ plain: true }));
-    res.render("pages/homepage", { events, loggedIn: req.session.loggedIn });
+    res.render("pages/homepage", { events, loggedIn: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

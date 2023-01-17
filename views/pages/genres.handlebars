@@ -1,5 +1,9 @@
 <section>
     <div id="genre-cards">Genre Cards Go Here</div>
+   <div> {{#each genres}}
+        {{> genrecard}}
+        {{/each}}
+        </div>
 </section>
 
 {{!--Inserting genre name on the cards--}}

@@ -16,7 +16,7 @@ router.get("/events", async (req, res) => {
 
     //Handlebars:
     const events = allEvents.map((event) => event.get({ plain: true }));
-    res.render("pages/events", { events });
+    res.render("pages/events", {events, loggedIn: req.session.logged_in});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -35,7 +35,7 @@ router.get("/events/:id", async (req, res) => {
     // res.status(200).json(dbEventData);
 
     //Handlebars:
-    res.render("pages/eventdetails");
+    res.render("pages/eventdetails", {loggedIn: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
   }

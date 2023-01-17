@@ -10,7 +10,7 @@ router.get("/genres", async (req, res) => {
     });
     const genres = dbGenreData.map((genre) => genre.get({ plain: true }));
 
-    res.render("pages/genres", { genres });
+    res.render("pages/genres", {genres, loggedIn: req.session.logged_in});
     //This is for insomnia test:
     // res.status(200).json(dbGenreData);
   } catch (err) {

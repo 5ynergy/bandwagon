@@ -70,9 +70,8 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // res.json({ user: userData, message: "You are now logged in!" });
+      res.redirect("/dashboard");
     });
-
-    res.render("pages/homepage");
   } catch (err) {
     res.status(400).json(err);
   }
@@ -86,8 +85,8 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    // res.redirect("/");
-    res.render("/dashboard")
+    res.render("/");
+    // res.json({message: "Logged out successfully."})
   } else {
     res.render("pages/404");
   }

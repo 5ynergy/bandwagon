@@ -66,12 +66,12 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id; 
       //CONFIRMED console logging req.session.user_id returns the user_id of the logged in person 
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       // res.json({ user: userData, message: "You are now logged in!" });
       
     });
-    res.render("pages/homepage")
+    res.redirect('/dashboard');
   } catch (err) {
     res.status(400).json(err);
   }

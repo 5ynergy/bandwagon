@@ -1,13 +1,13 @@
 <section>
 <div class="ui grid">
-    <div id="artist-image" class="eight wide column"><img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"></img></div>
+    <div id="artist-image" class="eight wide column"><img src="{{artist.user_image}}"></img></div>
     <div class="eight wide column">
-        <div id="artist-name"><h1>Super Cool Artist</h1></div> {{!-- {{ name }} goes in between --}}
-        <div id="artist-description"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quisquam vel impedit harum quam fugit maiores, assumenda accusantium unde dolores necessitatibus, ipsa nihil optio sit suscipit quas dolorem. Perferendis, laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quisquam vel impedit harum quam fugit maiores, assumenda accusantium unde dolores necessitatibus, ipsa nihil optio sit suscipit quas dolorem. Perferendis, laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quisquam vel impedit harum quam fugit maiores, assumenda accusantium unde dolores necessitatibus, ipsa nihil optio sit suscipit quas dolorem. Perferendis, laudantium?</h3></div>
+        <div id="artist-name"><h1>{{artist.name}}</h1></div>
+        <div id="artist-description"><h3>{{artist.bio}}</h3></div>
     </div>
     <div id="artist-socials" class="sixteen wide column">
         <h2>Social Media Links</h2>
-        <p>Social Media Links Here</p>
+        <p>{{artist.socials}}</p>
     </div>
 </div>
 </section>

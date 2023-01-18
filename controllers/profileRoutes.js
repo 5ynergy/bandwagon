@@ -10,8 +10,9 @@ async (req, res) => {
     const profileData = await User.findOne({ where: { id: req.session.user_id},
       include: [{ model: Genre, attributes: ['name'] }],
     });
+    const artist = await profileData.get({ plain: true })
     // res.status(200).json(profileData);
-    res.render("pages/profile", {profileData})
+    res.render("pages/profile", {artist})
 
   } catch (err) {
     res.status(500).json(err);

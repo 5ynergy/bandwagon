@@ -1,9 +1,12 @@
 <section>
     <div id="genre-cards">Genre Cards Go Here</div>
-   <div> {{#each genres}}
+    <div id="genre-cards" class="ui grid container">
+    {{#each genres}}
+        <div class="four wide column">
         {{> genrecard}}
-        {{/each}}
         </div>
+        {{/each}}
+    </div>
 </section>
 
 {{!--Inserting genre name on the cards--}}

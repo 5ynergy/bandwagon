@@ -41,7 +41,7 @@ router.post("/dashboard", async (req, res) => {
       user_id,
     });
     res.status(200).json(newEvent);
-
+    console.log(newEvent);
   } catch (err) {
     res.status(500).json(err);
   }

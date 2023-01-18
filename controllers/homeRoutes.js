@@ -10,18 +10,15 @@ router.get("/", async (req, res) => {
     todayStart.setUTCHours(0, 0, 0, 0);
     let todayEnd = new Date();
     todayEnd.setUTCHours(23, 59, 59, 0);
-    console.log(todayStart);
-    console.log(todayEnd);
     const HomeData = await Event.findAll({
-      where: { date: { [Op.gt]: todayStart, [Op.lt]: todayEnd } },
+      // where: { date: { [Op.gt]: todayStart, [Op.lt]: todayEnd } },
       include: [{ model: User, attributes: ["name"] }],
     });
-    console.log(HomeData);
-    console.log(req.session.logged_in);
     // res.status(200).json(dbEventData);
 
     //Handlebars:
     const events = HomeData.map((event) => event.get({ plain: true }));
+    // res.json(events)
     res.render("pages/homepage", { events, loggedIn: req.session.logged_in });
   } catch (err) {
     console.log(err.message);

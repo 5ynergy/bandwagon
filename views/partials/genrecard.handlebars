@@ -1,26 +1,26 @@
 {{!-- added in the anchor tag to link to corresponding genre page --}}
+<a href="/genres/{{ id }}">
 <div class="ui card">
-    <a href="/genres/{{ id }}">
     <div class="image">
-    <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3">
+    <img class="genreimage" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3">
     </div>
-    </a>
     <div class="content">
         <div class="header">{{ name }}</div>
         <div class="meta">
-            <a>{{address}}</a>
+            <a>{{address}}
         </div>
         <div class="description">
             {{ date }} {{ content }}
         </div>
     </div>
+    </a>
 </div>
+</a>
 
-
-<div>
+{{!-- <div>
     <a href="/genres/{{id}}">
     <div class="card">
     {{name}}
     </div>
     </a>
-</div>
+</div> --}}

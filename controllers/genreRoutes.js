@@ -26,11 +26,9 @@ router.get("/genres/:id", async (req, res) => {
       include: [{ model: User }],
     });
     //This is for insomnia test:
-    res.status(200).json(dbGenreData);
-    //TODO: Insert render code for handlebars:
-    //
-    //
-    //
+    // res.status(200).json(dbGenreData);
+    const genres = dbGenreData.map((genre) => genre.get({ plain: true }));
+res.render("")
   } catch (err) {
     res.status(500).json(err);
   }

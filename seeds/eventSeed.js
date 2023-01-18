@@ -22,7 +22,7 @@ const eventData = [
  {
       "id": 3,
       "event_name": "Crying Time",
-      "date": "2023-01-17 5:30:00",
+      "date": "2023-01-17 23:30:00",
       "address": "Your mom's house",
       "content": "Kick off fall with these goofs and their funky music!",
       "artist_id": 103,
@@ -31,7 +31,7 @@ const eventData = [
     {
         "id": 4,
         "event_name": "Crying Screaming Throwing Up",
-        "date": "2023-01-17 16:00:00",
+        "date": "2023-01-17 23:30:00",
         "address": "the sunken place",
         "content": "Curb your seasonal depression with some fun tunes!",
         "artist_id": 103,
@@ -40,7 +40,7 @@ const eventData = [
     {
       "id": 5,
       "event_name": "Sliding Up the Wall",
-      "date": "2023-01-17 5:30:00",
+      "date": "2023-01-17 23:30:00",
       "address": "Your mom's house",
       "content": "Kick off fall with these goofs and their funky music!",
       "artist_id": 103,
@@ -49,7 +49,7 @@ const eventData = [
     {
         "id": 6,
         "event_name": "Help",
-        "date": "2023-01-17 16:00:00",
+        "date": "2023-01-17 23:30:00",
         "address": "the sunken place",
         "content": "Curb your seasonal depression with some fun tunes!",
         "artist_id": 103,

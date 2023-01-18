@@ -29,7 +29,7 @@ const convertBase64 = (file) => {
 }
 
 const submitUser = (data) => {
-    axios.post("http://localhost:3001/signup", data)
+    axios.post("http://bandwagon-official.herokuapp.com/signup", data)
     .then((results) => {
         console.log(results.data)
         //if the results are okay redirect to the dashboard

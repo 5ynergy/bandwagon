@@ -68,8 +68,6 @@ router.post("/login", async (req, res) => {
       req.session.user_id = userData.id; 
       //CONFIRMED console logging req.session.user_id returns the user_id of the logged in person 
       req.session.logged_in = true;
-
-      // res.json({ user: userData, message: "You are now logged in!" });
       res.redirect("/dashboard");
     });
   } catch (err) {
@@ -85,7 +83,7 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    res.render("/");
+    res.render("pages/homepage");
     // res.json({message: "Logged out successfully."})
   } else {
     res.render("pages/404");

@@ -7,11 +7,11 @@ const withAuth = require("../utils/auth")
 router.get("/profile", withAuth,
 async (req, res) => {
   try {
-    const profileData = await User.findByPk(req.params.id, {
+    const profileData = await User.findOne({ where: { id: req.session.user_id},
       include: [{ model: Genre, attributes: ['name'] }],
     });
     // res.status(200).json(profileData);
-    res.render("pages/profile", {loggedIn: req.session.logged_in})
+    res.render("pages/profile", {profileData})
 
   } catch (err) {
     res.status(500).json(err);

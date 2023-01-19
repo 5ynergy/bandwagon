@@ -40,7 +40,7 @@ router.post("/dashboard", async (req, res) => {
       event_image,
       user_id,
     });
-    res.status(200).json(newEvent);
+    res.redirect("/dashboard")
 
   } catch (err) {
     res.status(500).json(err);

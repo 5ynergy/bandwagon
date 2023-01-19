@@ -12,7 +12,7 @@ router.get("/profile", withAuth, async (req, res) => {
     });
     const artist = await profileData.get({ plain: true });
     // res.status(200).json(profileData);
-    res.render("pages/profile", { artist });
+    res.render("pages/profile", { artist,loggedIn: req.session.logged_in }, );
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,11 +1,11 @@
 <section>
-    <div id="event-image"></div>
-    <div id="event-name">Event Name Goes Here</div>
-    <div id="artist-name">Artist Name Goes Here</div>
-    <div id="event-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quisquam vel impedit harum quam fugit maiores, assumenda accusantium unde dolores necessitatibus, ipsa nihil optio sit suscipit quas dolorem. Perferendis, laudantium?</div>
-    <div id="artist-socials"></div>
-    <div id="submit-signup"><button>Sign Up</button></div>
+  <div id="event-image"><img src="{{event.event_image}}"></div>
+  <div id="event-name">{{event.event_name}}</div>
+  <div id="artist-name"><a href="/artist/{{event.artist_id}}">{{event.User.name}}</a></div>
+  <div id="event-description">{{event.content}}</div>
+  <div id="artist-socials">{{event.User.socials}}</div>
+  <div id="submit-signup"><button>Sign Up</button></div>
 </section>
 
-{{!-- Insert data from eventRoutes, GET request for individual event
-Elements that can be clicked will have to link to the corresponding routes/pages --}}
+{{! Insert data from eventRoutes, GET request for individual event
+Elements that can be clicked will have to link to the corresponding routes/pages }}

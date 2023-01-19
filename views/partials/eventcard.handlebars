@@ -1,3 +1,4 @@
+<a href="/events/{{id}}">
 <div class="ui card">
   <div class="image">
     {{! replace with event_image when seed data is ready }}
@@ -6,9 +7,9 @@
     />
   </div>
   <div class="content">
-    <div class="header">{{User.name}}</div>
+    <div class="header"><a href="/artists/{{User.id}}">{{User.name}}</a></div>
     <div class="description">
-      {{event_name}}
+      <a href="/events/{{id}}">{{event_name}}</a>
     </div>
     <div class="meta">
       <a>{{address}}</a>
@@ -18,3 +19,5 @@
     </div>
   </div>
 </div>
+</a>
+

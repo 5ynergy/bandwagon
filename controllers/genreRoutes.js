@@ -22,7 +22,7 @@ router.get("/genres", async (req, res) => {
 //     //include User (name)
 router.get("/genres/:id", async (req, res) => {
   try {
-    const artistData = await User.findAll( { where: {genre_id: req.params.id}
+    const artistData = await User.findAll( { where: {genre_id: req.params.id}, include:[{ model: Genre}]
     });
 
     //This is for insomnia test:

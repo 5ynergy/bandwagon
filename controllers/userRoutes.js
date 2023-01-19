@@ -10,8 +10,6 @@ router.post("/signup", async (req, res) => {
     const image = uploadImage(user_image)
     .then(async (url) => {
       // console.log(url.secure_url)
-      // Need to figure out how to translate Front End Input genre name into genre_id for the back end
-    //const genre_id = front end input genre_name.id or something
     const newUser = await User.create({
       //Credentials
       username,

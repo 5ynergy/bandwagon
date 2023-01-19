@@ -8,6 +8,7 @@ const email = document.getElementById("email")
 const artist_name = document.getElementById("name")
 const bio = document.getElementById("bio")
 const socials = document.getElementById("socials")
+const genre_id = document.getElementById("genre_id")
 const profile_picture = document.getElementById("profile_picture")
 const submitButton = document.getElementById("submit")
 
@@ -47,7 +48,7 @@ submitButton.addEventListener("click", async (e) => {
     if (file.length === 1) {
         const profile_pic = await convertBase64(file[0])
         // console.log(profile_pic)
-        const data = {username: username.value, password: password.value, email: email.value, name: artist_name.value, bio: bio.value, socials: socials.value, user_image: profile_pic}
+        const data = {username: username.value, password: password.value, email: email.value, name: artist_name.value, bio: bio.value, socials: socials.value, genre_id: genre_id.value, user_image: profile_pic}
         submitUser(data);
     }
 })

@@ -16,10 +16,9 @@ router.get("/", async (req, res) => {
       where: { date: { [Op.gt]: todayStart, [Op.lt]: todayEnd } },
       include: [{ model: User, attributes: ["name"] }],
     });
-    console.log(HomeData);
+
     console.log(req.session.logged_in);
     // res.status(200).json(dbEventData);
-
     //Handlebars:
     const events = HomeData.map((event) => event.get({ plain: true }));
     res.render("pages/homepage", { events, loggedIn: req.session.logged_in });

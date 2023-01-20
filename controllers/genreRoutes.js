@@ -22,13 +22,13 @@ router.get("/genres", async (req, res) => {
 //     //include User (name)
 router.get("/genres/:id", async (req, res) => {
   try {
-    const artistData = await User.findAll( { where: {genre_id: req.params.id}, include:[{ model: Genre}]
+    const artistData = await User.findAll( { where: {genre_id: req.params.id}, include:[{ model: Genre, attributes: ['name']}]
     });
-   
-    // res.status(200).json(dbGenreData);
+    const genreData = await Genre.findByPk(req.params.id)
     const artists = artistData.map((artist) => artist.get({ plain: true }));
-    // const displaygenre = genreData.get({plain: true})
-    res.render("pages/genredetails", { artists, loggedIn: req.session.logged_in  });
+    const genre = genreData.get({plain:true});
+    // res.status(200).json(genre);
+    res.render("pages/genredetails", { artists, genre, loggedIn: req.session.logged_in  });
   } catch (err) {
     res.status(500).json(err);
   }

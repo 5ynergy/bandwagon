@@ -27,7 +27,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 //POST new event event (must be logged in)
 router.post("/dashboard", async (req, res) => {
   try {
-    const { event_name, date, address, content, event_image, user_id } =
+    const { event_name, date, address, content, event_image} =
       req.body;
     const artist_id = req.session.user_id;
     const image = uploadImage(event_image)
@@ -39,25 +39,10 @@ router.post("/dashboard", async (req, res) => {
         content,
         artist_id,
         event_image: url.secure_url,
-        user_id,
       });
       console.log(newEvent)
       console.log(image)
     }).catch((error) => console.log(error));
-
-       // const artist_id = req.session.user_id 
-        //(change 103 -> req.session.user_id after handlebars to test)
-    //const newEvent = await Event.create({ 
-    //  event_name,
-    //  date,
-    //  address,
-     // content,
-    //  artist_id,
-     // event_image,
-    //  user_id,
- //   });
- //   res.status(200).json(newEvent);
-  //  console.log(newEvent);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

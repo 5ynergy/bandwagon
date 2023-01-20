@@ -36,7 +36,7 @@ main.ui.center {
     max-height:100%;
 }
 
-html, body, main {padding:0; margin:0; min-height:100vh; overflow: visible; position: relative;}
+html, body, main {padding:0; margin:0; min-height:100vh; overflow: visible; position: absolute; width: 100vw; }
 
 html {
     overflow-x: initial !important;
@@ -49,11 +49,11 @@ html {
 }
 
 footer {
-    position: absolute; 
     bottom: 0; 
     left: 0; 
     right: 0;
     margin-top: auto;
+    position: fixed;
 }
 
 /* body > main > div > div {

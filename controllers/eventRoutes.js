@@ -27,15 +27,16 @@ router.get("/events", async (req, res) => {
 router.get("/events/:id", async (req, res) => {
   try {
     const dbEventData = await Event.findByPk(req.params.id, {
-      include: [{ model: User }],
+      include: [{ model: User, attributes: ["id","name","socials"] }],
     });
+    const event = dbEventData.get({plain: true})
     if (!dbEventData) {
       res.render("pages/404");
     }
     // res.status(200).json(dbEventData);
 
     //Handlebars:
-    res.render("pages/eventdetails", {loggedIn: req.session.logged_in});
+    res.render("pages/eventdetails", {event});
   } catch (err) {
     res.status(500).json(err);
   }

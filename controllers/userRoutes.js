@@ -10,8 +10,6 @@ router.post("/signup", async (req, res) => {
     const image = uploadImage(user_image)
     .then(async (url) => {
       // console.log(url.secure_url)
-      // Need to figure out how to translate Front End Input genre name into genre_id for the back end
-    //const genre_id = front end input genre_name.id or something
     const newUser = await User.create({
       //Credentials
       username,
@@ -47,9 +45,7 @@ router.post("/login", async (req, res) => {
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+      res.send("<script>alert('Invalid email or password, please try again!'); window.location.href = '/login';</script>");
       return;
     }
 
@@ -57,10 +53,7 @@ router.post("/login", async (req, res) => {
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
-      return;
+      res.send("<script>alert('Invalid email or password, please try again!'); window.location.href = '/login';</script>");
     }
 
     // Create session variables based on the logged in user -  !!! This is key for the requests that requires the current userid) !!!
@@ -83,7 +76,7 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    res.render("pages/homepage");
+    res.render("pages/login");
     // res.json({message: "Logged out successfully."})
   } else {
     res.render("pages/404");

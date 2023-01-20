@@ -45,9 +45,7 @@ router.post("/login", async (req, res) => {
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+      res.send("<script>alert('Invalid email or password, please try again!'); window.location.href = '/login';</script>");
       return;
     }
 
@@ -55,10 +53,7 @@ router.post("/login", async (req, res) => {
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
-      return;
+      res.send("<script>alert('Invalid email or password, please try again!'); window.location.href = '/login';</script>");
     }
 
     // Create session variables based on the logged in user -  !!! This is key for the requests that requires the current userid) !!!
@@ -81,7 +76,7 @@ router.get("/logout", (req, res) => {
     });
     req.end;
     //redirects to homepage after logged out
-    res.render("pages/homepage");
+    res.render("pages/login");
     // res.json({message: "Logged out successfully."})
   } else {
     res.render("pages/404");

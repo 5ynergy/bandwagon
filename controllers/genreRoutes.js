@@ -24,12 +24,11 @@ router.get("/genres/:id", async (req, res) => {
   try {
     const artistData = await User.findAll( { where: {genre_id: req.params.id}, include:[{ model: Genre}]
     });
-
-    //This is for insomnia test:
+   
     // res.status(200).json(dbGenreData);
     const artists = artistData.map((artist) => artist.get({ plain: true }));
- 
-    res.render("pages/genredetails", { artists });
+    // const displaygenre = genreData.get({plain: true})
+    res.render("pages/genredetails", { artists, loggedIn: req.session.logged_in  });
   } catch (err) {
     res.status(500).json(err);
   }

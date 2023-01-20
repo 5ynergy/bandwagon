@@ -36,6 +36,9 @@ main.ui.center {
     max-height:100%;
 }
 
+body, main {
+    height: 100%;
+}
 
 /* body > main > div > div {
     justify-content: center;

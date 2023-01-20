@@ -44,6 +44,20 @@ router.post("/dashboard", async (req, res) => {
       console.log(newEvent)
       console.log(image)
     }).catch((error) => console.log(error));
+
+       // const artist_id = req.session.user_id 
+        //(change 103 -> req.session.user_id after handlebars to test)
+    //const newEvent = await Event.create({ 
+    //  event_name,
+    //  date,
+    //  address,
+     // content,
+    //  artist_id,
+     // event_image,
+    //  user_id,
+ //   });
+ //   res.status(200).json(newEvent);
+  //  console.log(newEvent);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

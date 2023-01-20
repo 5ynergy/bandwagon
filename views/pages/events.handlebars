@@ -1,13 +1,13 @@
 {{!-- Can use this as a template for partials functionality --}}
-<section>
-    <h1>All Events</h1>
-    <h2>See everything that's happening near you.</h2>
-    <div id="event-cards" class="ui grid container">
-        {{#each events}}
-        <div class="four wide column">
-        {{> eventcard}}
-        </div>
-        {{/each}}
+
+<h1>All Events</h1>
+<h2>See everything that's happening near you.</h2>
+<div id="event-cards" class="ui grid container">
+    {{#each events}}
+    <div class="four wide column">
+    {{> eventcard}}
     </div>
-    <p><a href="/">Return Home</a></p>
-</section>
+    {{/each}}
+</div>
+<p><a href="/">Return Home</a></p>
+

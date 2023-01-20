@@ -36,9 +36,8 @@ main.ui.center {
     max-height:100%;
 }
 
-#map {
-    width: 100%;
-    height: 400px;
+body, main {
+    height: 100%;
 }
 
 /* body > main > div > div {

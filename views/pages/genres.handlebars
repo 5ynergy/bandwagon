@@ -1,15 +1,11 @@
-<section>
-
-    <h1>Discover new artists!</h1>
-
-    <div id="genre-cards" class="ui grid container">
+<div id="genre-cards" class="ui grid container">
     {{#each genres}}
         <div class="four wide column">
         {{> genrecard}}
         </div>
     {{/each}}
-    </div>
-</section>
+</div>
+
 
 {{!--Inserting genre name on the cards--}}
 {{!-- I think we might need one more handlbars file to show the artists 

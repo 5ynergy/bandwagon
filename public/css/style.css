@@ -40,6 +40,12 @@ body, main {
     height: 100%;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* body > main > div > div {
     justify-content: center;
 } */

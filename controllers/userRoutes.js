@@ -54,6 +54,7 @@ router.post("/login", async (req, res) => {
 
     if (!validPassword) {
       res.send("<script>alert('Invalid email or password, please try again!'); window.location.href = '/login';</script>");
+      return;
     }
 
     // Create session variables based on the logged in user -  !!! This is key for the requests that requires the current userid) !!!

@@ -10,7 +10,7 @@ router.get("/genres", async (req, res) => {
     });
     const genres = dbGenreData.map((genre) => genre.get({ plain: true }));
 
-    res.render("pages/genres", {genres, loggedIn: req.session.logged_in});
+    res.render("pages/genres", { genres, loggedIn: req.session.logged_in });
     //This is for insomnia test:
     // res.status(200).json(dbGenreData);
   } catch (err) {
@@ -22,13 +22,13 @@ router.get("/genres", async (req, res) => {
 //     //include User (name)
 router.get("/genres/:id", async (req, res) => {
   try {
-    const dbGenreData = await Genre.findByPk(req.params.id, {
-      include: [{ model: User }],
+    const artistData = await User.findAll( { where: {genre_id: req.params.id}, include:[{ model: Genre, attributes: ['name']}]
     });
-    //This is for insomnia test:
-    // res.status(200).json(dbGenreData);
-    const genres = dbGenreData.map((genre) => genre.get({ plain: true }));
-res.render("")
+    const genreData = await Genre.findByPk(req.params.id)
+    const artists = artistData.map((artist) => artist.get({ plain: true }));
+    const genre = genreData.get({plain:true});
+    // res.status(200).json(genre);
+    res.render("pages/genredetails", { artists, genre, loggedIn: req.session.logged_in  });
   } catch (err) {
     res.status(500).json(err);
   }

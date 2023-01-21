@@ -1,4 +1,7 @@
-<h1>Genre Details</h1>
-{{#each genres}}
+<div>
+{{!-- cannot get the genre name tag to show  --}}
+<h1>Discover new artists! {{genre.name}}</h1>
+{{#each artists}}
 {{>artistcard}}
 {{/each}}
+</div>

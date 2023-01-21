@@ -57,6 +57,9 @@
         placeholder="Enter social media links here"
       />
     </div>
+    <div class="field">
+    <label>Choose Genre</label>
+    </div>
     <select name="genre_id" id="genre_id" class="ui selection dropdown">
       <option value="">Genre</option>
       <option value="1">R&B</option>
@@ -74,11 +77,21 @@
       <option value="13">Blues</option>
       <option value="14">Country</option>
     </select>
+    <br>
+    <br>
+    <div class="field">
+    <label>Upload Profile Picture</label>
     </div>
     <div class="ui file input">
       <input type="file" id="profile_picture" name="profile_picture" />
     </div>
+    <br>
+    <br>
+    <div class="flex">
     <button class="ui primary button" id="submit" type="submit">Sign up!</button>
+    </div>
+    </div>
+    
   </form>
 </div>
   {{!-- <form action="/signup" method="POST">

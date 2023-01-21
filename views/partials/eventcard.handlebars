@@ -1,16 +1,16 @@
 
-{{!-- I don't know  why adding the anchor tag messes up the image size!--}}
+<a>
 <div class="ui card">
-  <div class="image">
-    {{! replace with event_image when seed data is ready }}
-    <img
-      src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
-    />
+    <div class="image">
+        {{!-- replace with event_image when seed data is ready --}}
+    <img class="genreimage" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3">
+
   </div>
   <div class="content">
     <div class="header"><a href="/artists/{{User.id}}">{{User.name}}</a></div>
     <div class="description">
       <a href="/events/{{id}}">{{event_name}}</a>
+
     </div>
     <div class="meta">
       <a>{{address}}</a>
@@ -20,5 +20,5 @@
     </div>
   </div>
 </div>
-
+</a>
 

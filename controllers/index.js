@@ -1,7 +1,4 @@
-//This is where we will put our middleware/router for the routes
-//Home routes will be in this folder
 const router = require("express").Router();
-// const apiRoutes = require("./api");
 const homeRoutes = require("./homeRoutes");
 const genreRoutes = require("./genreRoutes");
 const eventRoutes = require("./eventRoutes");
@@ -41,7 +38,6 @@ router.use(dashboardRoutes);
 // "/dashboard/:id" : PUT route for creating new event ONLY if logged in as user
 
 router.use(userRoutes);
-// router.use('/api', apiRoutes);
 
 //displays a 404 error when navigating to a link that does not exist
 router.use("*", (req, res) => {

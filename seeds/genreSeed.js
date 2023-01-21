@@ -1,50 +1,64 @@
-const { Genre } = require("../models")
+const { Genre } = require("../models");
 
 const genreData = [
   {
-      "name": "R&B"
+    name: "R&B",
+    image: "",
   },
   {
-      "name": "Pop"
+    name: "Pop",
+    image: "",
   },
   {
-      "name": "Hip-Hop"
+    name: "Hip-Hop",
+    image: "",
   },
   {
-      "name": "Latin"
+    name: "Latin",
+    image: "",
   },
   {
-      "name": "Electronic"
+    name: "Electronic",
+    image: "",
   },
   {
-      "name": "DJ"
+    name: "DJ",
+    image: "",
   },
   {
-      "name": "Dance/Alternative"
+    name: "Dance/Alternative",
+    image: "",
   },
   {
-      "name": "Rock"
+    name: "Rock",
+    image: "",
   },
   {
-      "name": "Indie"
+    name: "Indie",
+    image: "",
   },
   {
-      "name": "Soul/Funk"
+    name: "Soul/Funk",
+    image: "",
   },
   {
-      "name": "Folk/Acoustic"
+    name: "Folk/Acoustic",
+    image: "",
   },
   {
-      "name": "Metal"
+    name: "Metal",
+    image: "",
   },
   {
-      "name": "Blues"
+    name: "Blues",
+    image: "",
   },
   {
-      "name": "Country"
-  }
-]
+    name: "Country",
+    image: "",
+  },
+];
 
-const seedGenres = () => Genre.bulkCreate(genreData)
+const seedGenres = () => Genre.bulkCreate(genreData);
 
-module.exports = seedGenres
+module.exports = seedGenres;

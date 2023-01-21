@@ -10,13 +10,10 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const dashboardData = await Event.findAll({
       where: {
         artist_id: req.session.user_id,
-        //   (commented out for handlebars testing)
       },
       include: [{ model: User, attributes: ["name"] }],
     });
-    // This is for test
     // res.status(200).json(dashboardData);
-
     const events = dashboardData.map((event) => event.get({ plain: true }));
     res.render("pages/dashboard", { events, loggedIn: req.session.logged_in });
   } catch (err) {
@@ -27,7 +24,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 //POST new event event (must be logged in)
 router.post("/dashboard", async (req, res) => {
   try {
-    const { event_name, date, address, content, event_image} =
+    const { event_name, date, time, address, content, event_image} =
       req.body;
     const artist_id = req.session.user_id;
     const image = uploadImage(event_image)
@@ -35,6 +32,7 @@ router.post("/dashboard", async (req, res) => {
       const newEvent = await Event.create({
         event_name,
         date,
+        time,
         address,
         content,
         artist_id,
@@ -42,6 +40,7 @@ router.post("/dashboard", async (req, res) => {
       });
       console.log(newEvent)
       console.log(image)
+      res.status(200).json(newEvent)
     }).catch((error) => console.log(error));
   } catch (err) {
     console.log(err);

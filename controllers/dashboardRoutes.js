@@ -15,7 +15,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
     // res.status(200).json(dashboardData);
     const events = dashboardData.map((event) => event.get({ plain: true }));
-    res.render("pages/dashboard", { events, loggedIn: req.session.logged_in });
+    res.render("pages/dashboard", { events, loggedIn: req.session.logged_in, jsFile: "createEvent.js", artist_id: req.session.user_id });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -23,10 +23,11 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
 //POST new event event (must be logged in)
 router.post("/dashboard", async (req, res) => {
+  // console.log(req.body, "hello")
   try {
-    const { event_name, date, time, address, content, event_image} =
+    const { event_name, date, time, address, content, artist_id, event_image} =
       req.body;
-    const artist_id = req.session.user_id;
+    // const artist_id = req.session.user_id;
     const image = uploadImage(event_image)
     .then(async (url) => {
       const newEvent = await Event.create({

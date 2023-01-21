@@ -6,7 +6,7 @@
 
 <div id="form-div" class="four wide column">
    <h2>Got an event coming up? Give us the details!</h2>
-   <form action="/dashboard" method ="POST" class="ui form">
+   <form action="#" class="ui form">
    <div class="field">
       <label>Name of Event</label>
       <input 
@@ -17,12 +17,20 @@
          >
    </div>
    <div class="field">
-      <label>Date</label>
+      {{!-- <label>Date</label>
       <input 
          type="text" 
          name="date" 
          id="event_date"
-         placeholder="YYYY-MM-DD HH:MM:SS">
+         placeholder="YYYY-MM-DD HH:MM:SS"> --}}
+
+  <label for="event_date">Date and Time</label>
+      <input 
+      type="datetime-local" 
+      name="date"
+      id="event_date"
+      >
+   
    </div>
    <div class="field">
       <label>Location</label>

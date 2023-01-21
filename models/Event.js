@@ -41,7 +41,7 @@ Event.init(
           },
     },
     event_image: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
     }
 // When calling image, when finding User, take userImage string, put that into an img tag src to show the image

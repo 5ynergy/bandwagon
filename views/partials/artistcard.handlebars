@@ -1,11 +1,25 @@
-  <a href="/artist/{{id}}">
+  {{!-- <a href="/artist/{{id}}">
   <div class="ui fluid card">
-      <div class="image">
-        <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3">
+        <img src="{{user_image}}">
       </div>
       <div class="content">
         <a class="header">{{name}}</a>
         <p>{{socials}}</p>
       </div>
  </div>
-</a>
+</a> --}}
+
+<div class="ui card">
+  <div class="image">
+    <img src="{{user_image}}">
+  </div>
+  <div class="content">
+    <a href="/artist/{{id}}" class="header">{{name}}</a>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+         {{socials}}
+    </a>
+  </div>
+</div>

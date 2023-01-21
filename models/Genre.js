@@ -18,6 +18,10 @@ Genre.init(
     image: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    banner: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   },
   {

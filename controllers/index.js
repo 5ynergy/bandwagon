@@ -2,7 +2,6 @@ const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
 const genreRoutes = require("./genreRoutes");
 const eventRoutes = require("./eventRoutes");
-const artistRoutes = require("./artistRoutes");
 const profileRoutes = require("./profileRoutes");
 const dashboardRoutes = require("./dashboardRoutes");
 const userRoutes = require("./userRoutes");
@@ -29,8 +28,6 @@ router.use(eventRoutes);
 router.use(profileRoutes);
 //  "/profile/:id": GET route for artist profile (only displays when User id matches id in URL)
 // "/profile/:id" : PUT route for editing data (only NICE to have )
-
-router.use(artistRoutes);
 // "/artist/:id" : GET artist by ID (listener view). Also displays artist's events as cards
 
 router.use(dashboardRoutes);

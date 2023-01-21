@@ -9,10 +9,29 @@ const address = document.getElementById("address");
 const content = document.getElementById("content");
 const event_picture = document.getElementById("event_picture");
 const createEventButton = document.getElementById("createEventButton");
+const artist_id = document.getElementById("artist-id")
+let chosenDate;
+let splitDate;
+let finalDate;
+let chosenTime;
+let finalTime;
 
 //Turn date into SQL format YYYY-MM-DD
-const splitDate = event_date.split("-")
-const finalDate = `${splitDate[2]}-${splitDate[0]}-${splitDate[1]}`
+
+event_date.addEventListener("change", (e) => {
+  chosenDate = e.target.value
+  // splitDate = chosenDate.split("-")
+  // console.log(chosenDate)
+  // finalDate = `${splitDate[2]}-${splitDate[0]}-${splitDate[1]}`
+  // console.log(typeof chosenDate)
+})
+
+time.addEventListener("change", (e) => {
+  chosenTime = e.target.value
+  console.log(chosenTime)
+  finalTime = tConvert(chosenTime)
+})
+
 
 //Turn time into AM/PM format
 function tConvert (time) {
@@ -26,8 +45,6 @@ function tConvert (time) {
     }
     return time.join (''); // return adjusted time or original string
   }
-  
-const finalTime = tConvert(time)
 
 //converter function to convert image to base-64 format
 const convertBase64 = (file) => {
@@ -70,13 +87,14 @@ createEventButton.addEventListener("click", async (e) => {
     const event_pic = await convertBase64(file[0]);
     const data = {
       event_name: event_name.value,
-      date: finalDate,
+      date: chosenDate,
       time: finalTime,
       address: address.value,
       content: content.value,
-      artist_id: req.session.user_id,
+      artist_id: parseInt(artist_id.innerHTML),
       event_image: event_pic,
     };
+    console.log(data)
     submitEvent(data);
   }
 });

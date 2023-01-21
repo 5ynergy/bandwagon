@@ -17,7 +17,12 @@ Event.init(
       allowNull: false,
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+    },
+   //added time attribute
+    time: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     address: {

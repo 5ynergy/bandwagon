@@ -1,74 +1,72 @@
-const { Event } = require("../models")
+const { Event } = require("../models");
 
 const eventData = [
-    {
-      "id": 1,
-      "event_name": "Fallapalooza",
-      "date": "2023-01-20 5:30:00",
-      "address": "Your mom's house",
-      "content": "Kick off fall with these goofs and their funky music!",
-      "artist_id": 101,
-      "event_image": null
-    },
-    {
-        "id": 2,
-        "event_name": "Dark at 4pm",
-        "date": "2023-01-20 16:00:00",
-        "address": "the sunken place",
-        "content": "Curb your seasonal depression with some fun tunes!",
-        "artist_id": 102,
-        "event_image": null
-    },
- {
-      "id": 3,
-      "event_name": "Crying Time",
-      "date": "2023-01-17 23:30:00",
-      "address": "Your mom's house",
-      "content": "Kick off fall with these goofs and their funky music!",
-      "artist_id": 103,
-      "event_image": null
-    },
-    {
-        "id": 4,
-        "event_name": "Crying Screaming Throwing Up",
-        "date": "2023-01-17 23:30:00",
-        "address": "the sunken place",
-        "content": "Curb your seasonal depression with some fun tunes!",
-        "artist_id": 103,
-        "event_image": null
-    },
-    {
-      "id": 5,
-      "event_name": "Sliding Up the Wall",
-      "date": "2023-01-17 23:30:00",
-      "address": "Your mom's house",
-      "content": "Kick off fall with these goofs and their funky music!",
-      "artist_id": 103,
-      "event_image": null
-    },
-    {
-        "id": 6,
-        "event_name": "Help",
-        "date": "2023-01-17 23:30:00",
-        "address": "the sunken place",
-        "content": "Curb your seasonal depression with some fun tunes!",
-        "artist_id": 103,
-        "event_image": null
-    },
-    {
-      "id": 7,
-      "event_name": "Youre not supposed to see this",
-      "date": "2023-01-07 16:00:00",
-      "address": "the sunken place",
-      "content": "Curb your seasonal depression with some fun tunes!",
-      "artist_id": 102,
-      "event_image": null
-  }
-]
+  {
+    id: 1,
+    event_name: "Fallapalooza",
+    date: "2023-01-21",
+    time: "5:30 PM",
+    address: "633 Clark St, Evanston, IL 60208",
+    content: "Kick off fall with these goofs and their funky music!",
+    artist_id: 101,
+    event_image:
+      "https://preview.redd.it/3ffwf7ct81b71.jpg?width=960&crop=smart&auto=webp&v=enabled&s=3e53b063e81c4c829afb858e0d1c221ffe176088",
+  },
+  {
+    id: 2,
+    event_name: "Dark at 4pm",
+    date: "2023-01-21",
+    time: "5:30 PM",
+    address: "1901 W Madison St, Chicago, IL 60612",
+    content: "Curb your seasonal depression with some fun tunes!",
+    artist_id: 102,
+    event_image: null,
+  },
+  {
+    id: 3,
+    event_name: "Crying Time",
+    date: "2023-01-23",
+    time: "9:00 PM",
+    address: "633 Clark St, Evanston, IL 60208",
+    content: "Kick off fall with these goofs and their funky music!",
+    artist_id: 103,
+    event_image: null,
+  },
+  {
+    id: 4,
+    event_name: "Crying Screaming Throwing Up",
+    date: "2023-01-23",
+    time: "7:30 PM",
+    address: "1901 W Madison St, Chicago, IL 60612",
+    content: "Curb your seasonal depression with some fun tunes!",
+    artist_id: 103,
+    event_image: null,
+  },
+  {
+    id: 5,
+    event_name: "Sliding Up the Wall",
+    date: "2023-01-23",
+    time: "7:30 PM",
+    address: "633 Clark St, Evanston, IL 60208",
+    content: "Kick off fall with these goofs and their funky music!",
+    artist_id: 102,
+    event_image: null,
+  },
+  {
+    id: 6,
+    event_name: "Help",
+    date: "2023-01-23",
+    time: "5:30 PM",
+    address: "633 Clark St, Evanston, IL 60208",
+    content: "Curb your seasonal depression with some fun tunes!",
+    artist_id: 102,
+    event_image: null,
+  },
+];
 
-const seedEvents = () => Event.bulkCreate(eventData)
+const seedEvents = () => Event.bulkCreate(eventData);
 
-module.exports = seedEvents
+module.exports = seedEvents;
 
 // sample input Data
 // {
@@ -95,4 +93,3 @@ module.exports = seedEvents
 //     "artist_id": 101,
 //     "event_image": null
 // },
-    

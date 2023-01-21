@@ -20,7 +20,7 @@ const userData = [
         "name": "Sad Bois Club",
         "bio": "We are a group of sad bois and we sing sad songs...",
         "socials": "@sadboimusic",
-        "genre_id": 5,
+        "genre_id": 3,
         "user_image": null
       },
       {
@@ -28,7 +28,7 @@ const userData = [
         "email": "gee.yao@gmail.com",
         "password": "imsotired123",
         "name": "Grace",
-        "bio": "When will this suffering end",
+        "bio": "Grace is crying",
         "socials": "github.com/gyao1487",
         "genre_id": 3,
         "user_image": null

@@ -1,11 +1,12 @@
-<section>
-{{!-- <div id="artist-id">{{ artist_id }}</div> --}}
 
+<div class="ui segment">
+  <div class="ui active dimmer" id="event_dimmer">
+    <div class="ui text loader">Loading</div>
+  </div>
+<section>
     <h1>Dashboard Page</h1>
     <div id="sidebar"></div>
-
 <div class="ui grid">
-
 <div id="form-div" class="four wide column">
    <h2>Got an event coming up? Give us the details!</h2>
    <form {{!--action="/dashboard" method="POST"--}} class="ui form">
@@ -51,10 +52,11 @@
      <div class="ui file input">
       <input type="file" id="event_picture" name="event_picture" />
     </div>
+    <br>
+    <br>
    <button class="ui button" type="submit" id="createEventButton">Submit</button>
    </form>
 </div>
-
 <div id="event-div" class="ui twelve wide column">
    <div class="ui four column grid">
    <div id="eventfeed" class="row">  
@@ -66,27 +68,6 @@
    </div>
    </div>
 </div>
-
 </div>   
-
-
-    {{!-- <form action="/dashboard" method ="POST">
-        <label for="username">Name of the event</label><br>
-        <input type="text" name="event_name"><br>
-        <label for="password">Date</label><br>
-        <input type="text" name = "date"><br>
-        <label for="email" >Location</label><br>
-        <input type="text" name ="address"><br><br>
-        <label for="artist-name">Information about the event</label><br>
-        <input type="text" name="content"><br>
-        Add image upload after cloudinary 
-         <button class="ui primary button" type = "submit">Create event</button>
-    </form>  --}}
- 
 </section>
-
-
-{{!-- create Event cards for specific artist by User --}}
-{{!-- Form to create new event + create event button --}}
-{{!-- Create event button will have to be able to trigger the post request (form has to have method = "POST")--}}
-{{!-- for all elements that can be clicked, link to corresponding routes/pages --}}
+</div>

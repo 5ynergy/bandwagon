@@ -65,6 +65,14 @@ footer {
     margin-top: 20px;
 }
 
+#event_dimmer {
+    display:none;
+}
+
+#signup_dimmer {
+    display: none;
+}
+
 /* body > main > div > div {
     justify-content: center;
 } */

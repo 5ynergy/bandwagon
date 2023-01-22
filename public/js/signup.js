@@ -11,7 +11,7 @@ const socials = document.getElementById("socials");
 const genre_id = document.getElementById("genre_id");
 const profile_picture = document.getElementById("profile_picture");
 const submitButton = document.getElementById("submit");
-
+const loader = document.getElementById("signup-loader");
 //converter function to convert image to base-64 format
 const convertBase64 = (file) => {
   //if it's successful or if there's an error
@@ -46,6 +46,7 @@ const submitUser = (data) => {
 submitButton.addEventListener("click", async (e) => {
   e.preventDefault();
   const file = profile_picture.files;
+//   loader.setAttribute('style','display:block;');
   // console.log(file)
   if (file.length === 1) {
     const profile_pic = await convertBase64(file[0]);

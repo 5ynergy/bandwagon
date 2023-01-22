@@ -65,6 +65,15 @@ footer {
     margin-top: 20px;
 }
 
+#signup-loader{
+    display: none
+}
+
+#login-loader{
+    display: none
+}
+
+
 /* body > main > div > div {
     justify-content: center;
 } */

@@ -1,24 +1,16 @@
-{{!-- You can use this as a template for a functional form for creating new --}}
+ 
+ 
 
-{{!-- <section>
-    <h1>Login Page</h1>
-    <form action="/login" method="POST"> 
-        <label for="username">Username</label><br>
-        <input type="text" name ="username"><br>
-        <label for="password">Password</label><br>
-        <input type="text" name="password" ><br><br>
-        <button class="ui primary button" type = "submit">Log in</button>
-    </form> 
-    <a href="/signup">Create account</a>
-</section> --}}
-
- <h2 class="ui teal header">
+<div class="ui segment" id="login-segment">
+  <div class="ui active inverted dimmer" id="login-loader">
+    <div class="ui medium text loader">Loading</div>
+  </div>
+  <h2 class="ui teal header">
       <div class="content">
         Log-in to your account
       </div>
   </h2>
-
-<div class="">
+  <div class="">
   <div class="ui four column centered grid">
     <div class="column">
     <form class="ui large form login-form" action="/login" method="POST">
@@ -36,7 +28,7 @@
           </div>
         </div>
         {{!-- I changed the below div to button so that the login functionality works --}}
-        <button type="submit" class="ui fluid large teal submit button">Login</button>
+        <button type="submit" id ="login-button" class="ui fluid large teal submit button">Login</button>
       </div>
 
       <div class="ui error message"></div>
@@ -48,5 +40,6 @@
     </div>
     </div>
 </div>
+  <p></p>
+</div>
 
-{{!-- <script src="/public/js/login.js"></script> --}}

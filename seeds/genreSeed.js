@@ -39,37 +39,37 @@ const genreData = [
   {
     name: "Rock",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/7135121/pexels-photo-7135121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Indie",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Soul/Funk",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/7130499/pexels-photo-7130499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Folk/Acoustic",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/6985273/pexels-photo-6985273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Metal",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/6984989/pexels-photo-6984989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Blues",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Country",
     image: "",
-    banner:""
+    banner:"https://images.pexels.com/photos/7130557/pexels-photo-7130557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
 ];
 

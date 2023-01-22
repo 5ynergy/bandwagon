@@ -69,6 +69,10 @@ footer {
     display:none;
 }
 
+#signup_dimmer {
+    display: none;
+}
+
 /* body > main > div > div {
     justify-content: center;
 } */

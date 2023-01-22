@@ -101,6 +101,8 @@ footer {
     width: 100%;
     position: absolute;
     margin-top: 20px;
+    text-align: center;
+    border: 1px solid rgba(34,36,38,.15);
 }
 
 /* body > main > div > div {

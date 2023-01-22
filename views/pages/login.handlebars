@@ -1,16 +1,11 @@
- 
- 
 
-<div class="ui segment" id="login-segment">
-  <div class="ui active inverted dimmer" id="login-loader">
-    <div class="ui medium text loader">Loading</div>
-  </div>
-  <h2 class="ui teal header">
+ <h2 class="ui teal header">
       <div class="content">
         Log-in to your account
       </div>
   </h2>
-  <div class="">
+
+<div class="">
   <div class="ui four column centered grid">
     <div class="column">
     <form class="ui large form login-form" action="/login" method="POST">
@@ -28,7 +23,7 @@
           </div>
         </div>
         {{!-- I changed the below div to button so that the login functionality works --}}
-        <button type="submit" id ="login-button" class="ui fluid large teal submit button">Login</button>
+        <button type="submit" class="ui fluid large teal submit button">Login</button>
       </div>
 
       <div class="ui error message"></div>
@@ -40,6 +35,3 @@
     </div>
     </div>
 </div>
-  <p></p>
-</div>
-

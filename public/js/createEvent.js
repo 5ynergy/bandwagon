@@ -10,6 +10,7 @@ const content = document.getElementById("content");
 const event_picture = document.getElementById("event_picture");
 const createEventButton = document.getElementById("createEventButton");
 const artist_id = document.getElementById("artist-id");
+const eventDimmer = document.getElementById("event_dimmer");
 let chosenDate;
 let splitDate;
 let finalDate;
@@ -82,6 +83,7 @@ const submitEvent = (data) => {
 
 createEventButton.addEventListener("click", async (e) => {
   e.preventDefault();
+  eventDimmer.setAttribute("style", "display: flex");
   const file = event_picture.files;
   if (file.length === 1) {
     const event_pic = await convertBase64(file[0]);

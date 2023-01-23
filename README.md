@@ -25,8 +25,9 @@ We learned that separation of tasks for project members is crucial in full-stack
   - [License](#license)
   - [Contributing](#credits)
   
-##Demo 
+## Demo 
 💻 [Click here for the view the full video demo]()
+
 ## Installation
 
 No installation required. This app is hosted at this URL: https://bandwagon-official.herokuapp.com/ 

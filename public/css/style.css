@@ -109,11 +109,21 @@ footer {
     border: 1px solid rgba(34,36,38,.15);
 }
 
+
 /* CAROUSEL */
 
 #carousel-container {
     height: 800px;
     display: flex;
+
+#event_dimmer {
+    display:none;
+}
+
+#signup_dimmer {
+    display: none;
+}
+
     justify-content: center;
 }
 

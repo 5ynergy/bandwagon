@@ -17,7 +17,6 @@ This platform solves the problem of regular music enjoyers not being able to fin
 We learned that separation of tasks for project members is crucial in full-stack development. We learned a lot about effective back-end and front-end management, how to effectively use frameworks to create a great user experience easily, and how to implement the Model-View-Controller framework when it came to organizing our server and back-end. This was a truly fun project to create, and we can't wait to see what's in store for the future.
 
 ## Table of Contents 
-  - [Demo](#demo)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Features](#features)
@@ -25,8 +24,6 @@ We learned that separation of tasks for project members is crucial in full-stack
   - [License](#license)
   - [Contributing](#credits)
   
-## Demo 
-💻 [Click here for the view the full video demo]()
 
 ## Installation
 
@@ -45,10 +42,11 @@ Happy coding!
 ## Usage
 
 Check out our features from the deployed application: 
-
+💻 [Click here for the view the full video demo]()
 ![alt text](/public/assets/images/screenshotwebsite.jpg)
 
 ## Features
+- Map view displaying pins of event locations for the current day
 - Carousel of new artists on front page
 - Only "today's" events shown on homepage
 - Page to see all events happening near you

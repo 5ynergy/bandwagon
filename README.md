@@ -12,10 +12,10 @@
   - [Demo](#demo)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Features] (#features)
-  - [License](#license)
+  - [Features](#features)
   - [Credits](#credits)
-  - [Contributing] (#credits)
+  - [License](#license)
+  - [Contributing](#credits)
   
 ## Description
 

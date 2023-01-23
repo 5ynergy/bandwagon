@@ -49,6 +49,7 @@ Check out our features from the deployed application:
 ![alt text](/public/assets/images/screenshotwebsite.jpg)
 
 ## Features
+- Map view displaying pins of event locations for the current day
 - Carousel of new artists on front page
 - Only "today's" events shown on homepage
 - Page to see all events happening near you

@@ -1,10 +1,9 @@
-<section>
 <div class="ui grid">
-    <div id="artist-image" class="eight wide column">
-<img src="{{artist.user_image}}">
-        </img></div>
+    <div id="artist-image-div" class="seven wide column">
+    <img src="{{artist.user_image}}" id="profile-picture"></img>
+    </div>
     <div class="eight wide column">
-        <div id="artist-name"><h1>{{artist.name}}</h1></div>
+        <div><h1 id="artist-name">{{artist.name}}</h1></div>
         <div id="artist-description"><h3>{{artist.bio}}</h3></div>
     </div>
     <div id="artist-socials" class="sixteen wide column">
@@ -12,7 +11,7 @@
         <p>{{artist.socials}}</p>
     </div>
 </div>
-</section>
+
 
 
 {{!-- 

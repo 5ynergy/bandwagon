@@ -66,6 +66,11 @@ body {
     justify-content: center;
 }
 
+
+#artist-socials-content {
+  display:flex;
+  justify-content: center;
+}
 #artist-name {
     font-size: 100px;
 }

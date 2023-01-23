@@ -109,13 +109,6 @@ footer {
     border: 1px solid rgba(34,36,38,.15);
 }
 
-
-/* CAROUSEL */
-
-#carousel-container {
-    height: 800px;
-    display: flex;
-
 #event_dimmer {
     display:none;
 }
@@ -124,6 +117,11 @@ footer {
     display: none;
 }
 
+/* CAROUSEL */
+
+#carousel-container {
+    height: 800px;
+    display: flex;
     justify-content: center;
 }
 
@@ -133,7 +131,7 @@ input[type=radio] {
   
   .box {
     position: absolute;
-    width: 60%;
+    width: 100%;
     height: 100%;
     left: 0;
     right: 0;
@@ -144,8 +142,8 @@ input[type=radio] {
   
   .carousel {
     width: 100%;
-    max-width: 800px;
-    max-height: 600px;
+    max-width: 650px;
+    max-height: 650px;
     height: 100%;
     transform-style: preserve-3d;
     display: flex;
@@ -185,9 +183,6 @@ input[type=radio] {
     opacity: 1;
     z-index: 1;
     
-    img {
-      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-    }
   }
   
   .player {
@@ -247,14 +242,3 @@ input[type=radio] {
     transition: transform .4s ease-in;
   }
   
-  #item-2:checked ~ .player #test {
-    transform: translateY(0);
-  }
-  
-  #item-2:checked ~ .player #test  {
-    transform: translateY(-40px);
-  }
-  
-  #item-3:checked ~ .player #test  {
-    transform: translateY(-80px);
-  }

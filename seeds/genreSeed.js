@@ -45,6 +45,7 @@ const genreData = [
     name: "Indie",
     image: "",
     banner:"https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
   },
   {
     name: "Soul/Funk",

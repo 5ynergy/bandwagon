@@ -1,6 +1,4 @@
-{{! This is where we will put the main static layout for webpage
-We will add other handlebars files in main folder for each page.
-We will also use partials folder for partials }}
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -31,24 +29,27 @@ We will also use partials folder for partials }}
       <h1 >BANDWAGON</h1>
     </div>
     {{!-- <ul class="right menu"> --}}
-    <div class="right menu">
-      <li class="item"><p><a href="/">Home</a></p></li>
-      <li class="item"><a href="/events">Events</a></li>
-     
-      {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
-      
-      <li class="item"><a href="/genres">Artist by Genre</a></li>
-    {{#if loggedIn}}
+      <div class="right menu">
+        <li class="item">
+          <p><a href="/">Home</a></p>
+        </li>
+        <li class="item"><a href="/events">Events</a></li>
+
+        {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
+
+        <li class="item"><a href="/genres">Artist by Genre</a></li>
+        {{#if loggedIn}}
         <li class="item"><a href="/dashboard">Dashboard</a></li>
         <li class="item"><a href="/profile">Profile</a></li>
         <li class="item"><a href="/logout">Logout</a></li>
-    {{else}}
+        {{else}}
         <li class="item"><a href="/login">Log In</a></li>
         <li class="item"><a href="/signup">Sign Up</a></li>
-    {{/if}}
+        {{/if}}
 
-    </div>
-    {{!-- </ul> --}}
+      </div>
+      {{!--
+    </ul> --}}
   </nav>
     <main>
       {{{body}}}

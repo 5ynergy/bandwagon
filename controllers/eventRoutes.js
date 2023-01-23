@@ -10,7 +10,7 @@ router.get("/events", async (req, res) => {
     const d = new Date();
     const today = `${d.getFullYear()}-${months[d.getMonth()]}-${d.getDate()}`
     const allEvents = await Event.findAll({
-      where: { date: { [Op.gt]: today } },
+      where: { date: { [Op.gte]: today } },
       include: [{ model: User, attributes: ["name"] }],
     });
     // res.status(200).json(dbEventData); for testing

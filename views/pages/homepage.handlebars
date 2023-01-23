@@ -1,6 +1,26 @@
 <section>
     <h1>Check out events happening today! <span id="todays-date"></span></h1>
-    <div id="map" class="ui container segment">
+    <div id="carousel-container">
+        <div class="carousel">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="boxes">
+                <label class="box" for="item-1" id="song-1">
+                <img src="https://i.scdn.co/image/ab67616d0000b27358c111a12b5a9afa5292c389" alt="song">
+                </label>
+                <label class="box" for="item-2" id="song-2">
+                <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                </label>
+                <label class="box" for="item-3" id="song-3">
+                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    {{!-- <div id="map" class="ui container segment">
         <iframe
         width="100%"
         height="450"
@@ -11,7 +31,7 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDG2GS4Snd66r_9AHSP_Ox3bSi1wzSIlDA
             &q=Chicago+IL&q=Naperville+IL">
         </iframe>
-    </div>
+    </div> --}}
     <br>
     <br>
     <div>

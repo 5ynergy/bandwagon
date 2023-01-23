@@ -99,6 +99,10 @@ body {
     color: white;
 }
 
+#genre-card-name {
+    text-align: center;
+}
+
 footer {
     right: 0;
     left: 0;

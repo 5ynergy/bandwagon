@@ -26,6 +26,7 @@ const events = todayEvent.map((event) => event.get({ plain: true }));
     // res.status(200).json(events);
     //Handlebars:
     res.render("pages/homepage", { events, loggedIn: req.session.logged_in });
+    // res.json(events)
   } catch (err) {
     console.log(err.message);
     res.status(500).json(err);

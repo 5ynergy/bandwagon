@@ -1,18 +1,28 @@
 <section>
     <h1>Check out events happening today! <span id="todays-date"></span></h1>
-    <div id="map" class="ui container segment">
-        {{!-- <iframe
-        width="100%"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDG2GS4Snd66r_9AHSP_Ox3bSi1wzSIlDA
-            &q=Chicago+IL&q=Naperville+IL">
-        </iframe>
-    </div>
-    
+    <div id="map" class="ui container segment"></div>
+    <script>
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 41.8781, lng: -87.6298 },
+                zoom: 11
+            });
+            addMarker({lat:41.880650,lng:-87.675140});
+            addMarker({lat:42.049450,lng:-87.678130});
+            
+            function addMarker(coords) {
+                const marker = new google.maps.Marker({
+                position: coords,
+                map: map
+            });
+        }
+        }
+            
+        windows.initMap = initMap;
+    </script>
+    <script async defer
+        src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAUT-2fodGqnRZYiU7JIocjVSidEhRnOIQ&callback=initMap">
+    </script>
     <br>
     <br>
     <div>
@@ -25,3 +35,9 @@
         </div>
     </div>
 </section>
+
+{{!-- <script src="./js/Map.js"></script> --}}
+
+{{!-- AIzaSyAUT-2fodGqnRZYiU7JIocjVSidEhRnOIQ --}}
+
+{{!-- {lat:41.880650,lng:-87.675140}, {lat:42.049450,lng:-87.678130} --}}

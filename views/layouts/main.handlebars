@@ -1,69 +1,67 @@
-{{! This is where we will put the main static layout for webpage
-We will add other handlebars files in main folder for each page.
-We will also use partials folder for partials }}
+<!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bandwagon: Hop on!</title>
-    <link rel="icon" href="../../public/assets/images/icons8-music-heart-96.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.js"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    </head>
-  <body>
-    <nav class="ui stackable pointing menu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bandwagon: Hop on!</title>
+  <link rel="icon" href="../../public/assets/images/icons8-music-heart-96.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../public/css/normalize.css">
+  <link rel="stylesheet" href="../../public/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.0/dist/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <nav class="ui stackable pointing menu">
     <div class="item">
-      <h1 >BANDWAGON</h1>
+      <h1>BANDWAGON</h1>
     </div>
     {{!-- <ul class="right menu"> --}}
-    <div class="right menu">
-      <li class="item"><p><a href="/">Home</a></p></li>
-      <li class="item"><a href="/events">Events</a></li>
-     
-      {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
-      
-      <li class="item"><a href="/genres">Artist by Genre</a></li>
-    {{#if loggedIn}}
+      <div class="right menu">
+        <li class="item">
+          <p><a href="/">Home</a></p>
+        </li>
+        <li class="item"><a href="/events">Events</a></li>
+
+        {{! GY: Same goes for profile because we need to use the logged in user's id as well}}
+
+        <li class="item"><a href="/genres">Artist by Genre</a></li>
+        {{#if loggedIn}}
         <li class="item"><a href="/dashboard">Dashboard</a></li>
         <li class="item"><a href="/profile">Profile</a></li>
         <li class="item"><a href="/logout">Logout</a></li>
-    {{else}}
+        {{else}}
         <li class="item"><a href="/login">Log In</a></li>
         <li class="item"><a href="/signup">Sign Up</a></li>
-    {{/if}}
+        {{/if}}
 
-    </div>
-    {{!-- </ul> --}}
+      </div>
+      {{!--
+    </ul> --}}
   </nav>
-    <main>
-      {{{body}}}
-    </main>
-    <footer>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
     <div class="ui inverted vertical footer segment">
-    <div class="ui container">
+      <div class="ui container">
         Travel Match 2015. All Rights Reserved
+      </div>
     </div>
-    </div>
-    </footer>    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/{{ jsFile }}"></script>
-    <script src ="../../public/js/createEvent.js"></script>
-    <script src="../../public/js/loginLoader.js"></script>
-    {{!-- <script src="../../public/js/createEvent.js"></script> --}}
-  </body>
+  </footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  {{!-- <script src="js/{{ jsFile }}"></script> --}}
+  <script src="./js/createEvent.js"></script>
+  <script src="./js/loginLoader.js"></script>
+  
+  <script src="../../public/js/createEvent.js"></script>
+</body>
+
 </html>

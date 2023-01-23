@@ -1,10 +1,8 @@
-{{!-- added in the anchor tag to link to corresponding genre page --}}
+{{!--  anchor tag to link to corresponding genre page --}}
 <a href="/genres/{{ id }}">
 <div class="ui fluid card">
     <div class="image">
-    <img class="genreimage" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3">
-    {{!-- insert {{image}} into src when ready --}}
-    
+    <img class="genreimage" src="{{banner}}">
     </div>
     <div class="content">
         <div class="header">{{ name }}</div>
@@ -19,10 +17,3 @@
 </div>
 </a>
 
-{{!-- <div>
-    <a href="/genres/{{id}}">
-    <div class="card">
-    {{name}}
-    </div>
-    </a>
-</div> --}}

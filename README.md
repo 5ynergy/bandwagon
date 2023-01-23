@@ -47,17 +47,15 @@ This platform solves the problem of regular music enjoyers not being able to fin
 
 We learned that separation of tasks for project members is crucial in full-stack development. We learned a lot about effective back-end and front-end management, how to effectively use frameworks to create a great user experience easily, and how to implement the Model-View-Controller framework when it came to organizing our server and back-end. This was a truly fun project to create, and we can't wait to see what's in store for the future.
 
-
 ## Installation
 
 - Make your way to your GitHub.com profile.
 - Clone the repository via download, SSH, or your preferred method.
 - Npm install all required dependencies, and change your relevant database connection information.
-- Run the server and connect to local host.
+- Run the server using npm run dev and connect to local host.
 - Feel free to make any edits and changes!
 
 Happy coding!
-
 
 ## Usage
 
@@ -65,11 +63,9 @@ Check out our features from the deployed application:
 
 ![alt text](/public/assets/images/screenshotwebsite.jpg)
 
-
 ## Demo
 
 TO BE ADDED
-
 
 ## Credits
 
@@ -90,12 +86,10 @@ https://github.com/MoZCa
 Cloudinary - Image Hosting 
 https://cloudinary.com/
 
-
 ## License
 
 MIT licence
 https://spdx.org/licenses/MIT.html#:~:text=Text-,MIT%20License,-Copyright%20(c)%20%3Cyear
-
 
 ## Features
 - Carousel of new artists on front page
@@ -105,5 +99,3 @@ https://spdx.org/licenses/MIT.html#:~:text=Text-,MIT%20License,-Copyright%20(c)%
 - Sign up and event creation features image upload thanks ot Cloudinary
 - Ability to create new events and see them on your dashboard
 - Ability to create artist profile
-
-

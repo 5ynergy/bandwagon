@@ -43,7 +43,12 @@ Happy coding!
 
 Check out our features from the deployed application: 
 💻 [Click here for the view the full video demo]()
-![alt text](/public/assets/images/screenshotwebsite.jpg)
+![Homepage with map](/public/assets/images/map.PNG)
+![Events Page](/public/assets/images/Events-page.PNG)
+![Genre Page](/public/assets/images/genres.PNG)
+![Signup Page](/public/assets/images/signup.PNG)
+![Login Page](/public/assets/images/login.PNG)
+![Artist Dashboard](/public/assets/images/Dashboard.PNG)
 
 ## Features
 - Map view displaying pins of event locations for the current day

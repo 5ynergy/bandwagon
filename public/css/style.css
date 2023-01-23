@@ -8,6 +8,7 @@
 Html, body 
 {
     max-width: 100%;
+    max-height: 100%;
  }
 
 h1 {
@@ -46,8 +47,8 @@ html {
 }
 
 main {
-    min-height: 100%;
-    min-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 body {
@@ -116,8 +117,9 @@ body {
 footer {
     right: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     margin-top: 20px;
     text-align: center;
     border: 1px solid rgba(34,36,38,.15);
@@ -134,9 +136,10 @@ footer {
 /* CAROUSEL */
 
 #carousel-container {
-    height: 800px;
+    height: 650px;
     display: flex;
     justify-content: center;
+    margin: 50px;
 }
 
 input[type=radio] {

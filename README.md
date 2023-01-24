@@ -87,7 +87,7 @@ https://cloudinary.com/
 
 ## License
 
-MIT licence
+MIT license
 https://spdx.org/licenses/MIT.html#:~:text=Text-,MIT%20License,-Copyright%20(c)%20%3Cyear
 
 # Contributing

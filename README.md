@@ -1,20 +1,24 @@
 # Bandwagon 
-<p align="center">
-    <img src="https://img.shields.io/badge/Javascript-yellow" />
-    <img src="https://img.shields.io/badge/express-orange" />
-    <img src="https://img.shields.io/badge/Sequelize-blue"  />
-    <img src="https://img.shields.io/badge/mySQL-blue"  />
-    <img src="https://img.shields.io/badge/dotenv-green" />
-</p>
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+![dotenv](https://img.shields.io/badge/dotenv-green)
+      
 This app is a platform to connect both live music enthusiasts and apsiring musicians alike. Users can use this app to discover local local-up-and coming artists, as well as find local live music shows to attend. Music who are just starting out are able to utilize the platform to to reach new audiences, build a following, and advertise their upcoming shows/music. Built using MySQL2, Express, Sequelize, Handlebars, dotenv, and Fomantic UI.
 
-The motivation for this project was to solve a real-world problem, that problem being that it is extraordinarily difficulty for new artists to find new audiences and gain popularity. This website was made with unestablished artists in mind, created as a hub for music enthusiasts to find their next biggest sesnation.
+
+The motivation for this project was to solve a real-world problem, that problem being that it is extraordinarily difficulty for new artists to find new audiences and gain popularity. This website was made with unestablished artists in mind, created as a hub for music enthusiasts to find their next biggest sensation.
 
 We were inspired by our very real experiences in trying to find new artists that were local to us via other means besides recommended artists on Spotify and Instagram stories that disappear after 24 hours. It was also an insanely fun concept to work on, combining the arts of making a sustainable backend with persistent data along with a User Interface that feels friendly and easy-to-use.
 
 This platform solves the problem of regular music enjoyers not being able to find new and not yet popular artists, along with those artists being able to connect with potential fans and guide them to their events. This will continue to be a work in progress as we narrow down more information about potential users, consider expanding the project to include regular folks that may want a more social experience, and add additional useful features to create a more dynamic app.
 
-We learned that separation of tasks for project members is crucial in full-stack development. We learned a lot about effective back-end and front-end management, how to effectively use frameworks to create a great user experience easily, and how to implement the Model-View-Controller framework when it came to organizing our server and back-end. This was a truly fun project to create, and we can't wait to see what's in store for the future.
+We learned that separation of tasks for project members is crucial in full-stack development. We learned a lot about effective back-end and front-end management, how to effectively use frameworks to create a great user experience easily, and how to implement the Model-View-Controller framework when it came to organizing our server and back-end. This was a truly fun project to create, and we cannot wait to see what is in store for the future.
 
 ## Table of Contents 
   - [Installation](#installation)
@@ -42,8 +46,15 @@ Happy coding!
 ## Usage
 
 Check out our features from the deployed application: 
+
 💻 [Click here for the view the full video demo](https://youtu.be/MwMRO_uk90o)
 ![alt text](/public/assets/images/screenshotwebsite.jpg)
+![Homepage with map](/public/assets/images/map.PNG)
+![Events Page](/public/assets/images/Events-page.PNG)
+![Genre Page](/public/assets/images/genres.PNG)
+![Signup Page](/public/assets/images/signup.PNG)
+![Login Page](/public/assets/images/login.PNG)
+![Artist Dashboard](/public/assets/images/Dashboard.PNG)
 
 ## Features
 - Map view displaying pins of event locations for the current day

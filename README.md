@@ -46,7 +46,9 @@ Happy coding!
 ## Usage
 
 Check out our features from the deployed application: 
-💻 [Click here for the view the full video demo]()
+
+💻 [Click here for the view the full video demo](https://youtu.be/MwMRO_uk90o)
+![alt text](/public/assets/images/screenshotwebsite.jpg)
 ![Homepage with map](/public/assets/images/map.PNG)
 ![Events Page](/public/assets/images/Events-page.PNG)
 ![Genre Page](/public/assets/images/genres.PNG)

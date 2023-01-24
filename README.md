@@ -9,7 +9,7 @@
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![dotenv](https://img.shields.io/badge/dotenv-green)
       
-This app is a platform to connect both live music enthusiasts and apsiring musicians alike. Users can use this app to discover local local-up-and coming artists, as well as find local live music shows to attend. Music who are just starting out are able to utilize the platform to to reach new audiences, build a following, and advertise their upcoming shows/music. Built using MySQL2, Express, Sequelize, Handlebars, dotenv, and Fomantic UI.
+This app is a platform to connect both live music enthusiasts and apsiring musicians alike. Users can use this app to discover local local-up-and coming artists, as well as find local live music shows to attend. Music artists who are just starting out are able to utilize the platform to to reach new audiences, build a following, and advertise their upcoming shows/music. Built using MySQL2, Express, Sequelize, Handlebars, dotenv, and Fomantic UI.
 
 
 The motivation for this project was to solve a real-world problem, that problem being that it is extraordinarily difficulty for new artists to find new audiences and gain popularity. This website was made with unestablished artists in mind, created as a hub for music enthusiasts to find their next biggest sensation.

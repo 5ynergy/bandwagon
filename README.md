@@ -31,15 +31,12 @@ We learned that separation of tasks for project members is crucial in full-stack
 
 ## Installation
 
-No installation required. This app is hosted at this URL: https://bandwagon-official.herokuapp.com/ 
+No installation required! Access Bandwagon on [Heroku](https://bandwagon-official.herokuapp.com/) to explore the app right away. However, if you wish to configure and run the app locally, follow these steps:
 
-To access and manually configure with the code if you please:
-1. `git clone` the repo to your local machine so that you have the project files
-2. Install NodeJS and run `npm install` to install the following npm package dependencies specified in `package.json`:
-* bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2, nodemon, sequelize, [Cloudinary](https://cloudinary.com/), [Fomantic-ui](https://fomantic-ui.com/) 
-3. Enter your MySQL2 credentials into the .env file provided in the repo in order to connect to your local MySQL server
-4. Run the server and connect to local host:
-`npm run dev`
+1. `git clone` the repo to your local machine
+2. Install Node.js and run `npm install` to install the necessary dependencies from `package.json`
+3. Configure your MySQL2 credentials in the `.env` file
+4. Run the server with `npm run dev`
 
 Happy coding!
 
@@ -68,37 +65,29 @@ Check out our features from the deployed application:
 
 ## Credits
 
-The collaborators for this project are as follows:
+The collaborators for this project are:
 
-Grace Yao
-https://github.com/gyao1487
+- Grace Yao: [GitHub](https://github.com/gyao1487)
+- Jazmin Tweedle: [GitHub](https://github.com/jtweedle1)
+- Andrew Phinney: [GitHub](https://github.com/aphinney0516)
+- Moses Carrisoza: [GitHub](https://github.com/MoZCa)
 
-Jazmin Tweedle
-https://github.com/jtweedle1
-
-Andrew Phinney
-https://github.com/aphinney0516
-
-Moses Carrisoza
-https://github.com/MoZCa
-
-Cloudinary - Image Hosting 
-https://cloudinary.com/
+Cloudinary: [Website](https://cloudinary.com/)
 
 ## License
 
-MIT license
-https://spdx.org/licenses/MIT.html#:~:text=Text-,MIT%20License,-Copyright%20(c)%20%3Cyear
+[MIT License](https://spdx.org/licenses/MIT.html#:~:text=Text-,MIT%20License,-Copyright%20(c)%20%3Cyear)
 
-# Contributing
+## Contributing
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+We welcome contributions to Bandwagon! If you have any suggestions or enhancements, please follow these steps:
 
 1. Fork the Project
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (git push origin feature/AmazingFeature)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+Don't forget to give the project a star! Thanks for your support!
 
 
